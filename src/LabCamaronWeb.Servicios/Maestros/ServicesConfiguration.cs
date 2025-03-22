@@ -8,6 +8,7 @@ namespace LabCamaronWeb.Servicios.Maestros
     {
         public static IServiceCollection RegistrarServiciosMaestros(this IServiceCollection services)
         {
+            services.AddScoped<ISeCesionCupoVendedorService, SeCesionCupoVendedorService>();
             services.AddScoped<ISeParametroAmbientalService, SeParametroAmbientalService>();
             services.AddScoped<ISeEnteService, SeEnteService>();
             services.AddScoped<ISeCategoriaService, SeCategoriaService>();
