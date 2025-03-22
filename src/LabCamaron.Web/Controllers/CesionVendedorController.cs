@@ -2,6 +2,7 @@
 using LabCamaronWeb.Dto.Maestros.Categoria;
 using LabCamaronWeb.Dto.Maestros.CesionCupoVendedor;
 using LabCamaronWeb.Dto.Maestros.Color;
+using LabCamaronWeb.Dto.Maestros.CupoVendedor;
 using LabCamaronWeb.Infraestructura.Constantes.Menus;
 using LabCamaronWeb.Infraestructura.Constantes.Menus.Comercial;
 using LabCamaronWeb.Infraestructura.Constantes.Menus.Maestros;
@@ -13,26 +14,26 @@ using Microsoft.AspNetCore.Mvc;
 namespace LabCamaron.Web.Controllers
 
 {
-    public class CesionVendedorController(ISeCesionCupoVendedorService seCesionVendedorService) : BaseController
+    public class CesionVendedorController(ISeCupoVendedorService seCupoVendedorService) : BaseController
     {
-        private readonly ISeCesionCupoVendedorService _seCesionVendedor = seCesionVendedorService;
+        private readonly ISeCupoVendedorService _seCupoVendedorService = seCupoVendedorService;
 
-        private readonly ColorVm.ConsultarTodosColor _CesionTodos = new()
+        private readonly CupoVendedorVm.ConsultarCupoVendedor _consultarTodos = new()
         {
-            Activo = true
+            CodigoModuloLaboratorio = null,
+            IdLaboratorio = null,
         };
+
         [HttpGet]
-      
+        [Authorize]
         [AccesosMenu(MenuCesionCupoVendedor.CodigoMenu, PermisoGeneral.Ver)]
-
-
         public async Task<IActionResult> Index(string mensajeExito = "", string mensajeError = "")
         {
             try
             {
                 // Se consultan solo los roles activos
-                var respuestaConsulta = await _seCesionVendedor
-                  .ConsultarTodos(_CesionTodos);
+                var respuestaConsulta = await _seCupoVendedorService
+                  .ConsultarTodos(_consultarTodos);
 
                 // Procesa errores relacioados al problemas de comunicación
                 if (respuestaConsulta.Respuesta.TieneErrorServicio)

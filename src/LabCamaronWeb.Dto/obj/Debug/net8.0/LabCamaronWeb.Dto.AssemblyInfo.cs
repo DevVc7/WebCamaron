@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LabCamaronWeb.Dto")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1fcb88b127719b75815ab08d2a498ea28a970d12")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d87c536e1534301cdc57988dcb5fd14310c6cea")]
 [assembly: System.Reflection.AssemblyProductAttribute("LabCamaronWeb.Dto")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LabCamaronWeb.Dto")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
