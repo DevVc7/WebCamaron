@@ -1,0 +1,541 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\css\\demo.css",
+      "PackagePath": "staticwebassets\\css\\demo.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\avatars\\1.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\avatars\\5.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\avatars\\6.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\6.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\avatars\\7.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\7.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\avatars\\login-user.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\login-user.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\backgrounds\\18.jpg",
+      "PackagePath": "staticwebassets\\img\\backgrounds\\18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\elements\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\elements\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\elements\\11.jpg",
+      "PackagePath": "staticwebassets\\img\\elements\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\elements\\12.jpg",
+      "PackagePath": "staticwebassets\\img\\elements\\12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\elements\\13.jpg",
+      "PackagePath": "staticwebassets\\img\\elements\\13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\elements\\17.jpg",
+      "PackagePath": "staticwebassets\\img\\elements\\17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\elements\\18.jpg",
+      "PackagePath": "staticwebassets\\img\\elements\\18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\elements\\19.jpg",
+      "PackagePath": "staticwebassets\\img\\elements\\19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\elements\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\elements\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\elements\\20.jpg",
+      "PackagePath": "staticwebassets\\img\\elements\\20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\elements\\3.jpg",
+      "PackagePath": "staticwebassets\\img\\elements\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\elements\\4.jpg",
+      "PackagePath": "staticwebassets\\img\\elements\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\elements\\5.jpg",
+      "PackagePath": "staticwebassets\\img\\elements\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\elements\\7.jpg",
+      "PackagePath": "staticwebassets\\img\\elements\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\favicon\\favicon.ico",
+      "PackagePath": "staticwebassets\\img\\favicon\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\favicon\\laboratorio-100-1.png",
+      "PackagePath": "staticwebassets\\img\\favicon\\laboratorio-100-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\favicon\\laboratorio-100.png",
+      "PackagePath": "staticwebassets\\img\\favicon\\laboratorio-100.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\favicon\\laboratorio-24-1.png",
+      "PackagePath": "staticwebassets\\img\\favicon\\laboratorio-24-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\favicon\\laboratorio-24.png",
+      "PackagePath": "staticwebassets\\img\\favicon\\laboratorio-24.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\favicon\\laboratorio-48-1.png",
+      "PackagePath": "staticwebassets\\img\\favicon\\laboratorio-48-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\favicon\\laboratorio-48.png",
+      "PackagePath": "staticwebassets\\img\\favicon\\laboratorio-48.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\brands\\asana.png",
+      "PackagePath": "staticwebassets\\img\\icons\\brands\\asana.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\brands\\behance.png",
+      "PackagePath": "staticwebassets\\img\\icons\\brands\\behance.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\brands\\dribbble.png",
+      "PackagePath": "staticwebassets\\img\\icons\\brands\\dribbble.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\brands\\facebook.png",
+      "PackagePath": "staticwebassets\\img\\icons\\brands\\facebook.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\brands\\github.png",
+      "PackagePath": "staticwebassets\\img\\icons\\brands\\github.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\brands\\google.png",
+      "PackagePath": "staticwebassets\\img\\icons\\brands\\google.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\brands\\instagram.png",
+      "PackagePath": "staticwebassets\\img\\icons\\brands\\instagram.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\brands\\linkedin.png",
+      "PackagePath": "staticwebassets\\img\\icons\\brands\\linkedin.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\brands\\mailchimp.png",
+      "PackagePath": "staticwebassets\\img\\icons\\brands\\mailchimp.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\brands\\slack.png",
+      "PackagePath": "staticwebassets\\img\\icons\\brands\\slack.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\brands\\twitter.png",
+      "PackagePath": "staticwebassets\\img\\icons\\brands\\twitter.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\unicons\\cc-primary.png",
+      "PackagePath": "staticwebassets\\img\\icons\\unicons\\cc-primary.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\unicons\\cc-success.png",
+      "PackagePath": "staticwebassets\\img\\icons\\unicons\\cc-success.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\unicons\\cc-warning.png",
+      "PackagePath": "staticwebassets\\img\\icons\\unicons\\cc-warning.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\unicons\\chart-success.png",
+      "PackagePath": "staticwebassets\\img\\icons\\unicons\\chart-success.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\unicons\\chart.png",
+      "PackagePath": "staticwebassets\\img\\icons\\unicons\\chart.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\unicons\\paypal.png",
+      "PackagePath": "staticwebassets\\img\\icons\\unicons\\paypal.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\unicons\\wallet-info.png",
+      "PackagePath": "staticwebassets\\img\\icons\\unicons\\wallet-info.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\icons\\unicons\\wallet.png",
+      "PackagePath": "staticwebassets\\img\\icons\\unicons\\wallet.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\illustrations\\girl-doing-yoga-light.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\girl-doing-yoga-light.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\illustrations\\man-with-laptop.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\man-with-laptop.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\illustrations\\no-autorizado.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\no-autorizado.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\illustrations\\page-misc-error-light.png",
+      "PackagePath": "staticwebassets\\img\\illustrations\\page-misc-error-light.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\layouts\\layout-container-light.png",
+      "PackagePath": "staticwebassets\\img\\layouts\\layout-container-light.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\layouts\\layout-fluid-light.png",
+      "PackagePath": "staticwebassets\\img\\layouts\\layout-fluid-light.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\layouts\\layout-without-menu-light.png",
+      "PackagePath": "staticwebassets\\img\\layouts\\layout-without-menu-light.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\img\\layouts\\layout-without-navbar-light.png",
+      "PackagePath": "staticwebassets\\img\\layouts\\layout-without-navbar-light.png"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\Cargo\\cargo.js",
+      "PackagePath": "staticwebassets\\js\\Cargo\\cargo.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\Categoria\\categoria.js",
+      "PackagePath": "staticwebassets\\js\\Categoria\\categoria.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\Color\\color.js",
+      "PackagePath": "staticwebassets\\js\\Color\\color.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\Insumos\\insumos.js",
+      "PackagePath": "staticwebassets\\js\\Insumos\\insumos.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\asignacionCliente\\asignacion-cliente-popup.js",
+      "PackagePath": "staticwebassets\\js\\asignacionCliente\\asignacion-cliente-popup.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\asignacionCliente\\asignacion-cliente.js",
+      "PackagePath": "staticwebassets\\js\\asignacionCliente\\asignacion-cliente.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\config.js",
+      "PackagePath": "staticwebassets\\js\\config.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\cupoVendedor\\cupoVendedor-popup.js",
+      "PackagePath": "staticwebassets\\js\\cupoVendedor\\cupoVendedor-popup.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\cupoVendedor\\cupoVendedor.js",
+      "PackagePath": "staticwebassets\\js\\cupoVendedor\\cupoVendedor.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\dashboards-analytics.js",
+      "PackagePath": "staticwebassets\\js\\dashboards-analytics.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\dieta\\dieta.js",
+      "PackagePath": "staticwebassets\\js\\dieta\\dieta.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\enteCliente\\ente-cliente.js",
+      "PackagePath": "staticwebassets\\js\\enteCliente\\ente-cliente.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\entePersonal\\ente-personal.js",
+      "PackagePath": "staticwebassets\\js\\entePersonal\\ente-personal.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\enteTecnico\\ente-tecnico.js",
+      "PackagePath": "staticwebassets\\js\\enteTecnico\\ente-tecnico.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\enteVendedor\\ente-vendedor.js",
+      "PackagePath": "staticwebassets\\js\\enteVendedor\\ente-vendedor.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\ente\\ente-general.js",
+      "PackagePath": "staticwebassets\\js\\ente\\ente-general.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\ente\\ente-roles.js",
+      "PackagePath": "staticwebassets\\js\\ente\\ente-roles.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\estadioLarva\\estadio-larva-general.js",
+      "PackagePath": "staticwebassets\\js\\estadioLarva\\estadio-larva-general.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\extended-ui-perfect-scrollbar.js",
+      "PackagePath": "staticwebassets\\js\\extended-ui-perfect-scrollbar.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\form-basic-inputs.js",
+      "PackagePath": "staticwebassets\\js\\form-basic-inputs.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\laboratorio\\laboratorio-general.js",
+      "PackagePath": "staticwebassets\\js\\laboratorio\\laboratorio-general.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\moduloLaboratorio\\modulo-laboratorio-general.js",
+      "PackagePath": "staticwebassets\\js\\moduloLaboratorio\\modulo-laboratorio-general.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\parametroAmbiental\\parametro-ambiental-general.js",
+      "PackagePath": "staticwebassets\\js\\parametroAmbiental\\parametro-ambiental-general.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\planificacionSiembra\\planificacionSiembra.js",
+      "PackagePath": "staticwebassets\\js\\planificacionSiembra\\planificacionSiembra.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\rol\\rol.js",
+      "PackagePath": "staticwebassets\\js\\rol\\rol.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\tanque\\tanque-general.js",
+      "PackagePath": "staticwebassets\\js\\tanque\\tanque-general.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\ui-modals.js",
+      "PackagePath": "staticwebassets\\js\\ui-modals.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\ui-popover.js",
+      "PackagePath": "staticwebassets\\js\\ui-popover.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\ui-toasts.js",
+      "PackagePath": "staticwebassets\\js\\ui-toasts.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\unidadMedida\\unidad-medida-general.js",
+      "PackagePath": "staticwebassets\\js\\unidadMedida\\unidad-medida-general.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\js\\usuario\\formulario-editar-rol.js",
+      "PackagePath": "staticwebassets\\js\\usuario\\formulario-editar-rol.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\css\\core.css",
+      "PackagePath": "staticwebassets\\vendor\\css\\core.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\css\\pages\\page-account-settings.css",
+      "PackagePath": "staticwebassets\\vendor\\css\\pages\\page-account-settings.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\css\\pages\\page-auth.css",
+      "PackagePath": "staticwebassets\\vendor\\css\\pages\\page-auth.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\css\\pages\\page-icons.css",
+      "PackagePath": "staticwebassets\\vendor\\css\\pages\\page-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\css\\pages\\page-misc.css",
+      "PackagePath": "staticwebassets\\vendor\\css\\pages\\page-misc.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\css\\theme-default.css",
+      "PackagePath": "staticwebassets\\vendor\\css\\theme-default.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\fonts\\boxicons.css",
+      "PackagePath": "staticwebassets\\vendor\\fonts\\boxicons.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\fonts\\boxicons\\boxicons.eot",
+      "PackagePath": "staticwebassets\\vendor\\fonts\\boxicons\\boxicons.eot"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\fonts\\boxicons\\boxicons.svg",
+      "PackagePath": "staticwebassets\\vendor\\fonts\\boxicons\\boxicons.svg"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\fonts\\boxicons\\boxicons.ttf",
+      "PackagePath": "staticwebassets\\vendor\\fonts\\boxicons\\boxicons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\fonts\\boxicons\\boxicons.woff",
+      "PackagePath": "staticwebassets\\vendor\\fonts\\boxicons\\boxicons.woff"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\fonts\\boxicons\\boxicons.woff2",
+      "PackagePath": "staticwebassets\\vendor\\fonts\\boxicons\\boxicons.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\vendor\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\js\\helpers.js",
+      "PackagePath": "staticwebassets\\vendor\\js\\helpers.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\js\\menu.js",
+      "PackagePath": "staticwebassets\\vendor\\js\\menu.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\DataTables\\datatables.css",
+      "PackagePath": "staticwebassets\\vendor\\libs\\DataTables\\datatables.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\DataTables\\datatables.js",
+      "PackagePath": "staticwebassets\\vendor\\libs\\DataTables\\datatables.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\DataTables\\datatables.min.css",
+      "PackagePath": "staticwebassets\\vendor\\libs\\DataTables\\datatables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\DataTables\\datatables.min.js",
+      "PackagePath": "staticwebassets\\vendor\\libs\\DataTables\\datatables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\apex-charts\\apex-charts.css",
+      "PackagePath": "staticwebassets\\vendor\\libs\\apex-charts\\apex-charts.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\apex-charts\\apexcharts.js",
+      "PackagePath": "staticwebassets\\vendor\\libs\\apex-charts\\apexcharts.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\highlight\\highlight-github.css",
+      "PackagePath": "staticwebassets\\vendor\\libs\\highlight\\highlight-github.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\highlight\\highlight.css",
+      "PackagePath": "staticwebassets\\vendor\\libs\\highlight\\highlight.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\highlight\\highlight.js",
+      "PackagePath": "staticwebassets\\vendor\\libs\\highlight\\highlight.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\jquery\\jquery.js",
+      "PackagePath": "staticwebassets\\vendor\\libs\\jquery\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\masonry\\masonry.js",
+      "PackagePath": "staticwebassets\\vendor\\libs\\masonry\\masonry.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\perfect-scrollbar\\perfect-scrollbar.css",
+      "PackagePath": "staticwebassets\\vendor\\libs\\perfect-scrollbar\\perfect-scrollbar.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\perfect-scrollbar\\perfect-scrollbar.js",
+      "PackagePath": "staticwebassets\\vendor\\libs\\perfect-scrollbar\\perfect-scrollbar.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\popper\\popper.js",
+      "PackagePath": "staticwebassets\\vendor\\libs\\popper\\popper.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\select2-bootstrap-5-theme\\LICENSE",
+      "PackagePath": "staticwebassets\\vendor\\libs\\select2-bootstrap-5-theme"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\select2-bootstrap-5-theme\\select2-bootstrap-5-theme.css",
+      "PackagePath": "staticwebassets\\vendor\\libs\\select2-bootstrap-5-theme\\select2-bootstrap-5-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\select2-bootstrap-5-theme\\select2-bootstrap-5-theme.min.css",
+      "PackagePath": "staticwebassets\\vendor\\libs\\select2-bootstrap-5-theme\\select2-bootstrap-5-theme.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\select2-bootstrap-5-theme\\select2-bootstrap-5-theme.rtl.css",
+      "PackagePath": "staticwebassets\\vendor\\libs\\select2-bootstrap-5-theme\\select2-bootstrap-5-theme.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\select2-bootstrap-5-theme\\select2-bootstrap-5-theme.rtl.min.css",
+      "PackagePath": "staticwebassets\\vendor\\libs\\select2-bootstrap-5-theme\\select2-bootstrap-5-theme.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\select2\\i18n\\es.js",
+      "PackagePath": "staticwebassets\\vendor\\libs\\select2\\i18n\\es.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\select2\\select2.css",
+      "PackagePath": "staticwebassets\\vendor\\libs\\select2\\select2.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\select2\\select2.full.js",
+      "PackagePath": "staticwebassets\\vendor\\libs\\select2\\select2.full.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\select2\\select2.full.min.js",
+      "PackagePath": "staticwebassets\\vendor\\libs\\select2\\select2.full.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\select2\\select2.js",
+      "PackagePath": "staticwebassets\\vendor\\libs\\select2\\select2.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\select2\\select2.min.css",
+      "PackagePath": "staticwebassets\\vendor\\libs\\select2\\select2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\TrabajoJaime\\LabWebCamaron\\LabCamaronWeb\\src\\LabCamaron.Web\\wwwroot\\vendor\\libs\\select2\\select2.min.js",
+      "PackagePath": "staticwebassets\\vendor\\libs\\select2\\select2.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.LabCamaron.Web.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.LabCamaron.Web.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.LabCamaron.Web.props",
+      "PackagePath": "build\\LabCamaron.Web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.LabCamaron.Web.props",
+      "PackagePath": "buildMultiTargeting\\LabCamaron.Web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.LabCamaron.Web.props",
+      "PackagePath": "buildTransitive\\LabCamaron.Web.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,92 @@
+@model AsignacionClienteVm.Detallado
+@{
+    ViewData["Title"] = "Asignación Clientes";
+}
+
+@* ************** Content ************** *@
+<div class="row">
+    <!-- Basic Layout -->
+    <div class="col-xxl">
+        <div class="card mb-6">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Asignación Clientes</h5> <small class="text-muted float-end">@Context.ObtenerNombreModulo(MenuAsignacionCliente.CodigoMenu)</small>
+            </div>
+            <div class="card-body pt-1">
+                <form id="formAccountSettings" asp-controller="AsignacionCliente" asp-action="CrearDieta" method="POST">
+                    <div class="row g-12">
+                        <div class="col-md-12 text-danger text-end fw-bold mb-2">
+                          <span>Los campos señalados con * son obligatorios.</span>
+                        </div>
+                    </div>
+                    <div class="row g-6">
+                        <div class="col-md-6">
+                            <label for="IdLaboratorio" class="form-label required">Laboratorio</label>
+                            <select class="form-select" asp-for="IdLaboratorio" id="ComboLaboratorio" name="IdLaboratorio"
+                                    data-id="@Model.IdLaboratorio" data-text="@Model.NombreLaboratorio" autofocus required></select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="IdModulo" class="form-label required">Módulo</label>
+                            <select class="form-select" asp-for="IdModulo" id="ComboModulo" name="IdModulo"
+                                    data-id="@Model.IdModulo" data-text="@Model.NombreModulo" autofocus required></select>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="IdPlanificacion" class="form-label required">Planificación</label>
+                            <select class="form-select" asp-for="IdPlanificacion" id="ComboPlanificacionSiembra" name="IdPlanificacion"
+                                    data-id="@Model.IdPlanificacion" data-text="@Model.DescripcionPlanificacion" autofocus required></select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="IdEnteCliente" class="form-label required">Cliente</label>
+                            <select class="form-select" asp-for="IdEnteCliente" id="ComboCliente" name="IdEnteCliente"
+                                    data-id="@Model.IdEnteCliente" data-text="@Model.NombreEnteCliente" autofocus required></select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="IdEnteVendedor" class="form-label required">Vendedor</label>
+                            <select class="form-select" asp-for="IdEnteVendedor" id="ComboVendedor" name="IdEnteVendedor"
+                                    data-id="@Model.IdEnteVendedor" data-text="@Model.NombreEnteVendedor" autofocus required></select>
+                        </div>
+                        <div class="col-md-12 text-end">
+                            <button type="button" id="btnAgregarLote" class="me-2 mt-1 btn btn-primary btn-sm rounded">
+                                Agregar Lote
+                            </button>
+                        </div>
+                        <div class="col-md-12">
+                            <table id="tbDetalles" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr class="text-nowrap">
+                                        <th class="text-start">N°</th>
+                                        <th class="text-start" style="width:10%">Lote</th>
+                                        <th class="text-start" style="width:10%">Sector</th>
+                                        <th class="text-start" style="width:10%">Precría</th>
+                                        <th class="text-start" style="width:10%">Tanques</th>
+                                        <th class="text-start" style="width:10%">Salinidad</th>
+                                        <th class="text-start" style="width:10%">Temperatura</th>
+                                        <th class="text-start" style="width:10%">PlGramo</th>
+                                        <th class="text-start" style="width:10%">N.T</th>
+                                        <th class="text-start" style="width:10%">N.C</th>
+                                        <th class="text-center" style="width:25%">Acciones</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            @await Html.PartialAsync("AgregarLoteModal")
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        @if (Context.TienePermiso(MenuAsignacionCliente.CodigoMenu, MenuAsignacionCliente.Permisos.Crear))
+                        {
+                              <button type="submit" class="btn btn-primary me-3">Crear</button>
+                        }
+                        <a asp-action="Index" asp-controller="AsignacionCliente" type="reset" class="btn btn-outline-secondary">Regresar</a>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+    <!-- Basic with Icons -->
+</div>
+<script>
+    let tablaDetalles;
+    let detalles = @Html.Raw(Json.Serialize(this.Model.DetallesLote))
+</script>
+<script src="~/js/asignacionCliente/asignacion-cliente.js"></script>
+@await Html.PartialAsync("Sections/Toast/_ShowToast")

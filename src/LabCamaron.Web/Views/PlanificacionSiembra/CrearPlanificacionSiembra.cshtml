@@ -1,0 +1,142 @@
+@model PlanificacionSiembraVm
+@{
+    ViewData["Title"] = "PlanificacionSiembra";
+}
+
+@* ************** Content ************** *@
+<div class="row">
+    <!-- Basic Layout -->
+    <div class="col-xxl">
+        <div class="card mb-6">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Planificacion de siembra</h5> <small class="text-muted float-end">@Context.ObtenerNombreModulo(MenuPlanificacionSiembra.CodigoMenu)</small>
+            </div>
+            <div class="card-body pt-1">
+                <form id="formAccountSettings" asp-controller="PlanificacionSiembra" asp-action="CrearPlanificacionSiembra" method="POST">
+                    <div class="row g-12">
+                        <div class="col-md-12 text-danger text-end fw-bold mb-2">
+                            <span>Los campos señalados con * son obligatorios.</span>
+                        </div>
+                    </div>
+                    <div class="row g-6">
+                        <div class="col-md-6">
+                            <label for="Modulo" class="form-label required">Laboratorio</label>
+                            <select class="form-select" asp-for="IdLaboratorio" id="ComboLaboratorio" name="IdLaboratorio" required autofocus></select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Modulo" class="form-label required">Módulo</label>
+                            <select class="form-select" asp-for="IdModulo" id="ComboModulo" name="IdModulo" required autofocus></select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="FechaPlanificacion" class="form-label required">Planificacion</label>
+                            <input type="date" class="form-control" id="FechaPlanificacion" name="FechaPlanificacion">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="lblFechaPlanificaion" class="form-label"></label>
+                            <input class="form-control" type="text" id="lblFechaPlanificaion" name="lblFechaPlanificaion" maxlength="20" readonly disabled />
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label required">Densidad</label>
+                            <input asp-for="Densidad" class="form-control" type="number" id="Densidad" step="0.0000"
+                                   name="Densidad" placeholder="Densidad" autofocus required />
+                        </div>
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="Codigo" class="form-label required">Codigo</label>
+                            <input asp-for="Codigo" class="form-control" type="text" id="Codigo" name="Codigo" maxlength="20" required autofocus />
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label required">Corrida</label>
+                            <input asp-for="Corrida" class="form-control" type="number" id="Corrida" step="0"
+                                   name="Corrida" placeholder="Corrida" autofocus required />
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label required">Cantidad Facturada</label>
+                            <input asp-for="CantidadFacturada" class="form-control" type="number" id="CantidadFacturada" step="0"
+                                   name="CantidadFacturada" placeholder="Cantidad Facturada" step="1" min="0" pattern="\d+" required autofocus oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label required">Cantidad Bruta</label>
+                            <input asp-for="CantidadBruta" class="form-control" type="number" id="CantidadBruta" step="0"
+                                   name="CantidadBruta" placeholder="CantidadBruta" step="1" min="0" pattern="\d+" required autofocus oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
+                        </div>
+                    </div>
+
+                    <div class="row mt-4 g-6">
+                        <div class="col-md-12">
+
+
+                            <table id="prueba" class="table table-striped w-100">
+                                <thead>
+                                    <tr class="text-nowrap">
+                                        <th class="text-center" style="width:5%">Tanque</th>
+                                        <th class="text-start" style="width:10%">Sala</th>
+                                        <th class="text-start" style="width:10%">Código</th>
+                                        <th class="text-start" style="width:10%">C. Fact</th>
+                                        <th class="text-start" style="width:10%">C. Bruta</th>
+                                        <th class="text-start" style="width:10%">Guía</th>
+                                        <th class="text-start" style="width:15%">Fec. siembra</th>
+                                        <th class="text-start" style="width:20%">Base</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-border-bottom-0">
+                                    <tr class="text-nowrap">
+                                        <th class="text-center">1</th>
+                                        <td><input type="text" class="form-control" value="MB5"></td>
+                                        <td><input type="text" class="form-control" value="OMIP5G2BS"></td>
+                                        <td><input type="text" class="form-control" value="2.410"></td>
+                                        <td><input type="text" class="form-control" value="3.216"></td>
+                                        <td><input type="text" class="form-control" value="120"></td>
+                                        <td><input type="text" class="form-control" value="09/feb/2025"></td>
+                                        <td><input type="text" class="form-control" value="Mar Bravo"></td>
+                                    </tr>
+                                    <tr class="text-nowrap">
+                                        <th class="text-center">2</th>
+                                        <td><input type="text" class="form-control" value="MB5"></td>
+                                        <td><input type="text" class="form-control" value="OMTPn9G"></td>
+                                        <td><input type="text" class="form-control" value="3.000"></td>
+                                        <td><input type="text" class="form-control" value="3.217"></td>
+                                        <td><input type="text" class="form-control" value="145"></td>
+                                        <td><input type="text" class="form-control" value="10/feb/2025"></td>
+                                        <td><input type="text" class="form-control" value="Mar Bravo"></td>
+                                    </tr>
+                                    <tr class="text-nowrap">
+                                        <th class="text-center">3</th>
+                                        <td><input type="text" class="form-control" value="M"></td>
+                                        <td><input type="text" class="form-control" value="SNCOM3"></td>
+                                        <td><input type="text" class="form-control" value="2.414"></td>
+                                        <td><input type="text" class="form-control" value="4.000"></td>
+                                        <td><input type="text" class="form-control" value="167"></td>
+                                        <td><input type="text" class="form-control" value="09/feb/2025"></td>
+                                        <td><input type="text" class="form-control" value="Texcumar 5"></td>
+                                    </tr>
+                                    <tr class="text-nowrap">
+                                        <th class="text-center">4</th>
+                                        <td><input type="text" class="form-control" value="B6"></td>
+                                        <td><input type="text" class="form-control" value="Biolosa7.3G"></td>
+                                        <td><input type="text" class="form-control" value="2.600"></td>
+                                        <td><input type="text" class="form-control" value="3.334"></td>
+                                        <td><input type="text" class="form-control" value="200"></td>
+                                        <td><input type="text" class="form-control" value="09/feb/2025"></td>
+                                        <td><input type="text" class="form-control" value="Texcumar 1"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        @if (Context.TienePermiso(MenuPlanificacionSiembra.CodigoMenu, MenuPlanificacionSiembra.Permisos.Crear))
+                        {
+                            <button type="submit" class="btn btn-primary me-3">Crear</button>
+                        }
+                        <a asp-action="Index" asp-controller="PlanificacionSiembra" type="reset" class="btn btn-outline-secondary">Regresar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Basic with Icons -->
+</div>
+<script src="~/js/planificacionSiembra/planificacionSiembra.js"></script>
+@await Html.PartialAsync("Sections/Toast/_ShowToast")

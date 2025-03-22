@@ -1,0 +1,64 @@
+@model EstadioLarvaVm
+@{
+    ViewData["Title"] = "Estadio de Larva";
+}
+
+@* ************** Content ************** *@
+<div class="row">
+    <!-- Basic Layout -->
+    <div class="col-xxl">
+        <div class="card mb-6">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Estadio de Larva</h5> <small class="text-muted float-end">@Context.ObtenerNombreModulo(MenuEstadioLarva.CodigoMenu)</small>
+            </div>
+            <div class="card-body pt-1">
+                <form id="formAccountSettings" asp-action="EditarEstadioLarva" asp-controller="EstadioLarva" method="POST">
+                    <div class="row g-12">
+                      <div class="col-md-12 text-danger text-end fw-bold mb-2">
+                        <span>Los campos señalados con * son obligatorios.</span>
+                      </div>
+                    </div>
+                    <div class="row g-6">
+                        <input type="hidden" asp-for="Id" />
+                        <div class="col-md-6">
+                            <label for="Codigo" class="form-label">Código</label>
+                            <input asp-for="Codigo" class="form-control" type="text" id="Codigo"
+                              name="Codigo" maxlength="10" required autofocus readonly />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Laboratorio" class="form-label">Laboratorio</label>
+                            <input type="hidden" asp-for="IdLaboratorio" id="IdLaboratorio" name="IdLaboratorio" />
+                            <input asp-for="NombreLaboratorio" class="form-control" type="text" id="NombreLaboratorio"
+                              name="NombreLaboratorio" maxlength="10" required autofocus readonly />
+                        </div>
+                        <div class="col-md-12">
+                            <label for="Nombre" class="form-label required">Nombre</label>
+                            <input asp-for="Nombre" class="form-control" type="text" id="Nombre"
+                              name="Nombre" maxlength="150" required autofocus/>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="DiaDesde" class="form-label required">Día Desde</label>
+                            <input asp-for="DiaDesde" class="form-control" type="number"
+                                   name="DiaDesde" id="DiaDesde" autofocus required />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="DiaHasta" class="form-label required">Día Hasta</label>
+                            <input asp-for="DiaHasta" class="form-control" type="number"
+                                   name="DiaHasta" id="DiaHasta" autofocus required />
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        @if(Context.TienePermiso(MenuEstadioLarva.CodigoMenu, MenuEstadioLarva.Permisos.Editar))
+                        {
+                          <button type="submit" class="btn btn-primary me-3">Guardar Cambios</button>
+                        }
+                        <a asp-action="Index" asp-controller="EstadioLarva" type="reset" class="btn btn-outline-secondary">Regresar</a>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+    <!-- Basic with Icons -->
+</div>
+<script src="~/js/estadioLarva/estadio-larva-general.js"></script>
+@await Html.PartialAsync("Sections/Toast/_ShowToast")

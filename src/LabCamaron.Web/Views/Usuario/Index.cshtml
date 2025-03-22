@@ -1,0 +1,117 @@
+@model List<UsuarioVm>
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+@* ************** Content ************** *@
+<div class="row">
+    <!-- Basic Layout -->
+    <div class="col-xxl">
+        <div class="card mb-6">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Usuarios</h5> <small class="text-muted float-end">@Context.ObtenerNombreModulo(MenuUsuario.CodigoMenu)</small>
+            </div>
+            <div class="card-body pt-1 table-responsive text-nowrap">
+                <table id="prueba" class="table table-striped" style="width:100%">
+                    <thead>
+                        <tr class="text-nowrap">
+                            <th class="text-center" style="width:10%">N°</th>
+                            <th class="text-start" style="width:15%">Código</th>
+                            <th class="text-start" style="width:30%">Descripción</th>
+                            <th class="text-start" style="width:10%">Estado</th>
+                            <th class="text-start" style="width:15%">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            var persona = Model.ElementAt(i);
+                            <tr>
+                                <td class="text-center">@(i + 1)</td>
+                                <td class="text-start">@persona.Codigo</td>
+                                <td class="text-start">@persona.Descripcion</td>
+                                <td class="text-start">
+                                    @if (persona.Activo)
+                                    {
+                                        <span class="badge bg-success me-1">Activo</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger me-1">Inactivo</span>
+                                    }
+                                </td>
+                                <td class="text-start">
+                                    @if (Context.TienePermiso(MenuUsuario.CodigoMenu, MenuUsuario.Permisos.Editar))
+                                    {
+                                        <a class="btn btn-sm btn-primary" asp-controller="Usuario" asp-action="EditarUsuario" asp-route-codigo="@persona.Codigo">Editar</a>
+                                    }
+
+                                    @if (Context.TienePermiso(MenuUsuario.CodigoMenu, MenuUsuario.Permisos.Eliminar) && @persona.Activo)
+                                    {
+                                        <form asp-controller="Usuario" asp-action="EliminarUsuario" method="post" style="display:inline;">
+                                            <input type="hidden" name="Codigo" id="Codigo" value="@persona.Codigo" />
+                                            <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                                        </form>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Basic with Icons -->
+</div>
+@await Html.PartialAsync("Sections/Toast/_ShowToast")
+<script>
+    const puedeCrear = @Html.Raw(JsonConvert.SerializeObject(Context.TienePermiso(MenuUsuario.CodigoMenu, MenuUsuario.Permisos.Crear)));
+    let botones = [];
+
+    if(puedeCrear){
+      botones.push({
+        text: '<i class="bx bx-plus-circle"></i> Agregar',
+        className: 'me-2 mt-1 btn btn-primary btn-sm rounded',
+        action: function (e, dt, node, config) {
+          window.location.href = '/Usuario/CrearUsuario';
+        }
+      });
+    }
+
+    botones.push({
+      extend: 'excelHtml5',
+      title: 'Exportación de Usuarios',
+      text: '<i class="bx bxs-download"></i> Exportar xls',
+      className: 'me-2 mt-1 btn btn-success btn-sm rounded'
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        $('#prueba').DataTable({
+            dom: '<"d-flex justify-content-between align-items-center mb-3"Bf>rt<"d-flex justify-content-between align-items-center mt-3"lip>', // Usuarioliza el layout
+            buttons: botones,
+            lengthMenu: [5, 10, 25, 50, 100],
+            pageLength: 5,
+            language: {
+                decimal: "",
+                emptyTable: "No hay información",
+                info: "Mostrando _START_ a _END_ de _TOTAL_ registros",
+                infoEmpty: "Mostrando 0 to 0 de 0 Entradas",
+                infoFiltered: "(Filtrado de _MAX_ total entradas)",
+                lengthMenu: "Mostrar  _MENU_",
+                loadingRecords: "Cargando...",
+                processing: "Procesando...",
+                search: "Buscar:",
+                zeroRecords: "Sin resultados encontrados",
+                paginate: {
+                    first: "<i class='bx bx-chevrons-left'></i>",
+                    last: "<i class='bx bx-chevrons-right'></i>",
+                    next: "<i class='bx bx-chevron-right'></i>",
+                    previous: "<i class='bx bx-chevron-left'></i>"
+                }
+            }
+        });
+    });
+
+</script>

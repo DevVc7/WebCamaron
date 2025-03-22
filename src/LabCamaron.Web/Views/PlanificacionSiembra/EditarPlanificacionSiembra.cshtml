@@ -1,0 +1,48 @@
+@model CategoriaVm
+@{
+    ViewData["Title"] = "Categoria";
+}
+
+@* ************** Content ************** *@
+<div class="row">
+    <!-- Basic Layout -->
+    <div class="col-xxl">
+        <div class="card mb-6">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Categoria</h5> <small class="text-muted float-end">@Context.ObtenerNombreModulo(MenuCategoria.CodigoMenu)</small>
+            </div>
+            <div class="card-body pt-1">
+                <form id="formAccountSettings" asp-controller="Categoria" asp-action="EditarCategoria" method="POST">
+                    <div class="row g-12">
+                        <div class="col-md-12 text-danger text-end fw-bold mb-2">
+                            <span>Los campos señalados con * son obligatorios.</span>
+                        </div>
+                    </div>
+                    <div class="row g-6">
+                        <input type="hidden" asp-for="Id" id="Id" name="Id" />
+                        <div class="col-md-6">
+                            <label for="Nombre" class="form-label required">Nombre</label>
+                            <input asp-for="Nombre" class="form-control" type="text" id="Nombre"
+                                   name="Nombre" maxlength="150" required autofocus />
+                        </div>
+                        <div class="col-md-12">
+                            <label for="Descripcion" class="form-label">Descripción</label>
+                            <input asp-for="Descripcion" class="form-control" type="text"
+                                   name="Descripcion" id="Descripcion" autofocus />
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        @if (Context.TienePermiso(MenuCategoria.CodigoMenu, MenuCategoria.Permisos.Editar))
+                        {
+                            <button type="submit" class="btn btn-primary me-3">Guardar Cambios</button>
+                        }
+                        <a asp-action="Index" asp-controller="Categoria" type="reset" class="btn btn-outline-secondary">Regresar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Basic with Icons -->
+</div>
+<script src="~/js/categoria/categoria.js"></script>
+@await Html.PartialAsync("Sections/Toast/_ShowToast")

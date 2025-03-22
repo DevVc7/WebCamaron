@@ -1,0 +1,33 @@
+/* Custom styles goes here */
+.required {
+    font-weight: bold; /* Aplica negrita al texto */
+}
+
+    .required::after {
+        content: " *"; /* Agrega un asterisco */
+        color: red; /* Cambia el color del asterisco a rojo */
+    }
+
+input[readonly] {
+    background-color: #fafafa !important; /* Color más oscuro */
+    color: #666; /* Texto con menor contraste */
+    border-color: #bbb; /* Opcional, para distinguir más el estado */
+    cursor: not-allowed; /* Indica que no es editable */
+}
+
+select[readonly] + .select2-container {
+    pointer-events: none;
+    touch-action: none;
+    cursor: not-allowed !important; /* Indica que no es editable */
+}
+
+    select[readonly] + .select2-container .select2-selection {
+        background-color: #fafafa !important;
+        color: #666;
+        border-color: #bbb; /* Opcional, para distinguir más el estado */
+    }
+
+    select[readonly] + .select2-container .select2-selection__arrow,
+    select[readonly] + .select2-container .select2-selection__clear {
+        display: none;
+    }

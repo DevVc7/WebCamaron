@@ -1,0 +1,13 @@
+C:\Users\Usuario\Documents\TrabajoJaime\LabWebCamaron\LabCamaronWeb\src\LabCamaronWeb.Infraestructura\bin\Debug\net8.0\LabCamaronWeb.Infraestructura.deps.json
+C:\Users\Usuario\Documents\TrabajoJaime\LabWebCamaron\LabCamaronWeb\src\LabCamaronWeb.Infraestructura\bin\Debug\net8.0\LabCamaronWeb.Infraestructura.dll
+C:\Users\Usuario\Documents\TrabajoJaime\LabWebCamaron\LabCamaronWeb\src\LabCamaronWeb.Infraestructura\bin\Debug\net8.0\LabCamaronWeb.Infraestructura.pdb
+C:\Users\Usuario\Documents\TrabajoJaime\LabWebCamaron\LabCamaronWeb\src\LabCamaronWeb.Infraestructura\obj\Debug\net8.0\LabCamaronWeb.Infraestructura.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\TrabajoJaime\LabWebCamaron\LabCamaronWeb\src\LabCamaronWeb.Infraestructura\obj\Debug\net8.0\LabCamaronWeb.Infraestructura.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Documents\TrabajoJaime\LabWebCamaron\LabCamaronWeb\src\LabCamaronWeb.Infraestructura\obj\Debug\net8.0\LabCamaronWeb.Infraestructura.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\TrabajoJaime\LabWebCamaron\LabCamaronWeb\src\LabCamaronWeb.Infraestructura\obj\Debug\net8.0\LabCamaronWeb.Infraestructura.AssemblyInfo.cs
+C:\Users\Usuario\Documents\TrabajoJaime\LabWebCamaron\LabCamaronWeb\src\LabCamaronWeb.Infraestructura\obj\Debug\net8.0\LabCamaronWeb.Infraestructura.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\TrabajoJaime\LabWebCamaron\LabCamaronWeb\src\LabCamaronWeb.Infraestructura\obj\Debug\net8.0\LabCamaronWeb.Infraestructura.sourcelink.json
+C:\Users\Usuario\Documents\TrabajoJaime\LabWebCamaron\LabCamaronWeb\src\LabCamaronWeb.Infraestructura\obj\Debug\net8.0\LabCamaronWeb.Infraestructura.dll
+C:\Users\Usuario\Documents\TrabajoJaime\LabWebCamaron\LabCamaronWeb\src\LabCamaronWeb.Infraestructura\obj\Debug\net8.0\refint\LabCamaronWeb.Infraestructura.dll
+C:\Users\Usuario\Documents\TrabajoJaime\LabWebCamaron\LabCamaronWeb\src\LabCamaronWeb.Infraestructura\obj\Debug\net8.0\LabCamaronWeb.Infraestructura.pdb
+C:\Users\Usuario\Documents\TrabajoJaime\LabWebCamaron\LabCamaronWeb\src\LabCamaronWeb.Infraestructura\obj\Debug\net8.0\ref\LabCamaronWeb.Infraestructura.dll

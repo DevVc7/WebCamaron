@@ -1,0 +1,115 @@
+@model List<InsumosVm>
+@{
+    ViewData["Title"] = "Insumos";
+}
+
+@* ************** Content ************** *@
+<div class="row">
+    <!-- Basic Layout -->
+    <div class="col-xxl">
+        <div class="card mb-6">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Insumos</h5> <small class="text-muted float-end">@Context.ObtenerNombreModulo(MenuInsumos.CodigoMenu)</small>
+            </div>
+            <div class="card-body pt-1 table-responsive text-nowrap">
+                <table id="prueba" class="table table-striped" style="width:100%">
+                    <thead>
+                        <tr class="text-nowrap">
+                            <th class="text-center" style="width:10%">N°</th>
+                            <th class="text-start" style="width:20%">Laboratorio</th>
+                            <th class="text-start" style="width:20%">SKU</th>
+                            <th class="text-start" style="width:20%">Código</th>
+                            <th class="text-start" style="width:20%">Insumos</th>
+                            <th class="text-start" style="width:20%">Marca</th>
+                            <th class="text-start" style="width:20%">Presentación</th>
+                            <th class="text-start" style="width:15%">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            var data = Model.ElementAt(i);
+                            <tr>
+                                <td class="text-center">@(i + 1)</td>
+                                <td class="text-start">@data.NombreLaboratorio</td>
+                                <td class="text-start">@data.Sku</td>
+                                <td class="text-start">@data.Codigo</td>
+                                <td class="text-start">@data.NombreInsumo</td>
+                                <td class="text-start">@data.NombreMarca</td>
+                                <td class="text-start">@data.Presentacion @data.UnidadMedida</td>
+                                <td class="text-start">
+                                    @if (Context.TienePermiso(MenuInsumos.CodigoMenu, MenuInsumos.Permisos.Editar))
+                                    {
+                                        <form asp-controller="Insumos" asp-action="EditarInsumos" method="get" style="display:inline;">
+                                            <input type="hidden" name="id" id="id" value="@data.Id" />
+                                            <button type="submit" class="btn btn-sm btn-primary">Editar</button>
+                                        </form>
+                                    }
+                                    @if (Context.TienePermiso(MenuInsumos.CodigoMenu, MenuInsumos.Permisos.Eliminar))
+                                    {
+                                        <form asp-controller="Insumos" asp-action="EliminarInsumos" method="post" style="display:inline;">
+                                            <input type="hidden" name="id" id="id" value="@data.Id" />
+                                            <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                                        </form>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Basic with Icons -->
+</div>
+@await Html.PartialAsync("Sections/Toast/_ShowToast")
+<script>
+    const puedeCrear = @Html.Raw(JsonConvert.SerializeObject(Context.TienePermiso(MenuInsumos.CodigoMenu, MenuInsumos.Permisos.Crear)));
+    let botones = [];
+
+    if(puedeCrear){
+      botones.push({
+        text: '<i class="bx bx-plus-circle"></i> Agregar',
+        className: 'me-2 mt-1 btn btn-primary btn-sm rounded',
+        action: function (e, dt, node, config) {
+          window.location.href = '/Insumos/CrearInsumos';
+        }
+      });
+    }
+
+    botones.push({
+      extend: 'excelHtml5',
+      title: 'Exportación de Insumoss',
+      text: '<i class="bx bxs-download"></i> Exportar xls',
+      className: 'me-2 mt-1 btn btn-success btn-sm rounded'
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        $('#prueba').DataTable({
+            dom: '<"d-flex justify-content-between align-items-center mb-3"Bf>rt<"d-flex justify-content-between align-items-center mt-3"lip>', // Personaliza el layout
+            buttons: botones,
+            lengthMenu: [5, 10, 25, 50, 100],
+            pageLength: 5,
+            language: {
+                decimal: "",
+                emptyTable: "No hay información",
+                info: "Mostrando _START_ a _END_ de _TOTAL_ registros",
+                infoEmpty: "Mostrando 0 to 0 de 0 Entradas",
+                infoFiltered: "(Filtrado de _MAX_ total entradas)",
+                lengthMenu: "Mostrar  _MENU_",
+                loadingRecords: "Cargando...",
+                processing: "Procesando...",
+                search: "Buscar:",
+                zeroRecords: "Sin resultados encontrados",
+                paginate: {
+                    first: "<i class='bx bx-chevrons-left'></i>",
+                    last: "<i class='bx bx-chevrons-right'></i>",
+                    next: "<i class='bx bx-chevron-right'></i>",
+                    previous: "<i class='bx bx-chevron-left'></i>"
+                }
+            }
+        });
+    });
+
+</script>

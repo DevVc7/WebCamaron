@@ -1,0 +1,55 @@
+@model PermisoRolVm
+@{
+    ViewData["Title"] = "Rol";
+}
+
+@* ************** Content ************** *@
+<div class="row">
+    <!-- Basic Layout -->
+    <div class="col-xxl">
+        <div class="card mb-6">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Roles de Usuario</h5> <small class="text-muted float-end">@Context.ObtenerNombreModulo(MenuRol.CodigoMenu)</small>
+            </div>
+            <div class="card-body pt-1">
+                <div class="row g-12">
+                    <div class="col-md-12 text-start">
+                        <label class="form-label">Edición de Permisos para el Rol: @Model.NombreRol [@Model.CodigoRol]</label>
+                    </div>
+                    <input class="form-check-input" type="hidden" id="CodigoRol" value="@Model.CodigoRol">
+                    <div class="col md-12 mb-3 mt-3">
+                        @foreach (var modulo in Model.Modulos)
+                        {
+                            <h6 class="form-label">@modulo.NombreModulo</h6>
+                            @foreach (var menu in modulo.Menus)
+                            {
+                                <div class="col md-12">
+                                    <label class="form-label mb-2 mt-2 ms-3">@menu.NombreMenu</label>
+                                    @foreach (var menuAccion in menu.MenuAcciones)
+                                    {
+                                        <div class="mb-3 form-check ms-3">
+                                            <div class="form-check form-switch">
+                                                <label class="form-label" for="@menuAccion.IdMenuAccion"><b>@menuAccion.CodigoAccion</b><span class="fw-normal"> - @menuAccion.DescripcionAccion</span></label>
+                                                <input class="form-control form-check-input" type="checkbox" checked="@menuAccion.TienePermiso" id="@menuAccion.IdMenuAccion" name="permisos" />
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                        }
+                    </div>
+                    <div class="mt-3">
+                          @if (Context.TienePermiso(MenuRol.CodigoMenu, MenuRol.Permisos.EditarPermisos))
+                          {
+                              <button class="btn btn-primary me-3" onclick="GuardarRolesPermisos()">Guardar Cambios</button>
+                          }
+                          <a asp-action="Index" asp-controller="Rol" type="reset" class="btn btn-outline-secondary">Regresar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Basic with Icons -->
+</div>
+<script src="~/js/rol/rol.js"></script>
+@await Html.PartialAsync("Sections/Toast/_ShowToast")

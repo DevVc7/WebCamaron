@@ -1,0 +1,157 @@
+@model EnteVm.Detallado
+@if (Context.TienePermiso(MenuEnte.CodigoMenu, MenuEnte.Permisos.EditarVendedor))
+{
+    <form id="FormularioVendedor" asp-controller="Ente" asp-action="EditarVendedorEnte" method="post">
+        <fieldset class="fieldset-floating">
+            <legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" asp-for="Vendedor.Activo" id="ActivoVendedor" name="Activo">
+                    <label class="form-check-label" for="ActivoVendedor">
+                        Vendedor
+                    </label>
+                </div>
+            </legend>
+            <div class="fieldset-content">
+                <div class="row g-6">
+                    <input type="hidden" asp-for="Id" name="IdEnte" />
+                    <input type="hidden" asp-for="Identificacion" name="Identificacion" />
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="CodigoVendedor" class="form-label">Código</label>
+                        <input asp-for="Vendedor.Codigo" class="form-control" type="text" id="CodigoVendedor"
+                               name="Codigo" min="10" maxlength="10" autofocus />
+                    </div>
+                </div>
+                <div class="mt-3 text-end">
+                    <button id="btnVendedor" type="submit" class="btn btn-primary me-3">Guardar Vendedor</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+}
+@if (Context.TienePermiso(MenuEnte.CodigoMenu, MenuEnte.Permisos.EditarCliente))
+{
+    <form id="FormularioCliente" asp-controller="Ente" asp-action="EditarClienteEnte" method="post">
+        <fieldset class="fieldset-floating">
+            <legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" asp-for="Cliente.Activo" id="ActivoCliente" name="Activo">
+                    <label class="form-check-label" for="ActivoCliente">
+                        Cliente
+                    </label>
+                </div>
+            </legend>
+            <div class="fieldset-content">
+                <div class="row g-6">
+                    <input type="hidden" asp-for="Id" name="IdEnte" />
+                    <input type="hidden" asp-for="Identificacion" name="Identificacion" />
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="CodigoCliente" class="form-label">Código</label>
+                        <input asp-for="Cliente.Codigo" class="form-control" type="text" id="CodigoCliente"
+                               name="Codigo" min="10" maxlength="10" autofocus />
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="ContactoCliente" class="form-label">Contacto</label>
+                        <input asp-for="Cliente.Contacto" class="form-control" type="text" id="ContactoCliente"
+                               name="Contacto" maxlength="200" autofocus />
+                    </div>
+                </div>
+                <div class="mt-3 text-end">
+                    <button id="btnCliente" type="submit" class="btn btn-primary me-3">Guardar Cliente</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+}
+
+@if (Context.TienePermiso(MenuEnte.CodigoMenu, MenuEnte.Permisos.EditarTecnico))
+{
+    <form id="FormularioTecnico" asp-controller="Ente" asp-action="EditarTecnicoEnte" method="post">
+        <fieldset class="fieldset-floating">
+            <legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" asp-for="Tecnico.Activo" id="ActivoTecnico" name="Activo">
+                    <label class="form-check-label" for="ActivoTecnico">
+                        Técnico
+                    </label>
+                </div>
+            </legend>
+            <div class="fieldset-content">
+                <div class="row g-6">
+                    <input type="hidden" asp-for="Id" name="IdEnte" />
+                    <input type="hidden" asp-for="Identificacion" name="Identificacion" />
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="CodigoTecnico" class="form-label">Código</label>
+                        <input asp-for="Tecnico.Codigo" class="form-control" type="text" id="CodigoTecnico"
+                               name="Codigo" min="10" maxlength="10" autofocus />
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="Modulo" class="form-label">Función Técnico</label>
+                        <select class="form-select" asp-for="Tecnico.IdFuncionTecnico" id="ComboFuncionTecnico" name="IdFuncionTecnico"
+                                data-id="@Model.Tecnico.IdFuncionTecnico" data-text="@Model.Tecnico.NombreFuncionTecnico" autofocus></select>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="Modulo" class="form-label">Laboratorio</label>
+                        <select class="form-select" asp-for="Tecnico.IdLaboratorio" id="ComboLaboratorio" name="IdLaboratorio"
+                                data-id="@Model.Tecnico.IdLaboratorio" data-text="@Model.Tecnico.NombreLaboratorio" autofocus></select>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="Modulo" class="form-label">Módulo</label>
+                        <select class="form-select" asp-for="Tecnico.IdModuloLaboratorio" id="ComboModulo" name="IdModuloLaboratorio"
+                                data-id="@Model.Tecnico.IdModuloLaboratorio" data-text="@Model.Tecnico.NombreModuloLaboratorio" autofocus></select>
+                    </div>
+                    
+                </div>
+                <div class="mt-3 text-end">
+                    <button id="btnTecnico" type="submit" class="btn btn-primary me-3">Guardar Técnico</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+}
+
+@if (Context.TienePermiso(MenuEnte.CodigoMenu, MenuEnte.Permisos.EditarPersonal))
+{
+    <form id="FormularioPersonal" asp-controller="Ente" asp-action="EditarPersonalEnte" method="post">
+        <fieldset class="fieldset-floating">
+            <legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" asp-for="Personal.Activo" id="ActivoPersonal" name="Activo">
+                    <label class="form-check-label" for="ActivoPersonal">
+                        Personal
+                    </label>
+                </div>
+            </legend>
+            <div class="fieldset-content">
+                <div class="row g-6">
+                    <input type="hidden" asp-for="Id" name="IdEnte" />
+                    <input type="hidden" asp-for="Identificacion" name="Identificacion" />
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="CodigoPersonal" class="form-label">Código</label>
+                        <input asp-for="Personal.Codigo" class="form-control" type="text" id="CodigoPersonal"
+                               name="Codigo" min="10" maxlength="10" autofocus />
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="Modulo" class="form-label">Cargo</label>
+                        <select class="form-select" asp-for="Personal.IdCargo" id="ComboCargo" name="IdCargo"
+                                data-id="@Model.Personal.IdCargo" data-text="@Model.Personal.NombreCargo" autofocus></select>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="Modulo" class="form-label">Laboratorio</label>
+                        <select class="form-select" asp-for="Personal.IdLaboratorio" id="ComboLaboratorioPersonal" name="IdLaboratorio"
+                                data-id="@Model.Personal.IdLaboratorio" data-text="@Model.Personal.NombreLaboratorio" autofocus></select>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="Modulo" class="form-label">Módulo</label>
+                        <select class="form-select" asp-for="Personal.IdModuloLaboratorio" id="ComboModuloPersonal" name="IdModuloLaboratorio"
+                                data-id="@Model.Personal.IdModuloLaboratorio" data-text="@Model.Personal.NombreModuloLaboratorio" autofocus></select>
+                    </div>
+
+                </div>
+                <div class="mt-3 text-end">
+                    <button id="btnPersonal" type="submit" class="btn btn-primary me-3">Guardar Personal</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+}
+<script src="~/js/ente/ente-roles.js"></script>
