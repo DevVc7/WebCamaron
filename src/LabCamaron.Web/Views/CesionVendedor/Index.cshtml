@@ -1,0 +1,132 @@
+@model List<ModuloLaboratorioVm>
+@{
+    ViewData["Title"] = "Cupo vendedor";
+}
+
+<div class="row">
+    <div class="col-xxl">
+        <div class="card mb-6">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Cupo Vendedor</h5>
+                <small class="text-muted float-end">@Context.ObtenerNombreModulo(MenuCupoVendedor.CodigoMenu)</small>
+            </div>
+            <div class="card-body pt-1 table-responsive text-nowrap">
+                <table id="prueba" class="table table-striped" style="width:100%">
+                    <thead>
+                        <tr class="text-nowrap">
+                            <th class="text-center" style="width:10%">N°</th>
+                            <th class="text-start" style="width:10%">Laboratorio</th>
+                            <th class="text-start" style="width:10%">Módulo</th>
+                            <th class="text-start" style="width:15%">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            var rol = Model.ElementAt(i);
+                            <tr>
+                                <td class="text-center">@(i + 1)</td>
+                                <td class="text-start">@rol.NombreLaboratorio</td>
+                                <td class="text-start">@rol.Nombre</td>
+                                <td class="text-start">
+                                    @if (Context.TienePermiso(MenuCupoVendedor.CodigoMenu, MenuCupoVendedor.Permisos.Editar))
+                                    {
+                                        <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalCederCupo" onclick="llenarModal('@rol.IdLaboratorio', '@rol.Codigo', '@rol.NombreLaboratorio', '@rol.Nombre')">
+                                            Ceder Cupo
+                                        </button>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalCederCupo" tabindex="-1" aria-labelledby="modalCederCupoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCederCupoLabel">Ceder Cupo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-3">
+                    <div class="col-md-3">
+                        <label for="laboratorio" class="form-label">Laboratorio</label>
+                        <input type="text" class="form-control" id="laboratorio" disabled>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="planificacion" class="form-label">Planificación</label>
+                        <input type="text" class="form-control" id="planificacion" disabled>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="vendedorA" class="form-label">Vendedor A</label>
+                        <input type="text" class="form-control" id="vendedorA" disabled>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="vendedorB" class="form-label">Vendedor B</label>
+                        <input type="text" class="form-control" id="vendedorB" disabled>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <h5 class="text-center">VENDEDOR 1</h5>
+                        <label for="cupoActual1" class="form-label">Cupo actual</label>
+                        <input type="text" class="form-control" id="cupoActual1" disabled>
+                        <label for="nuevoCupo1" class="form-label">Nuevo</label>
+                        <input type="text" class="form-control" id="nuevoCupo1">
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="text-center">VENDEDOR 2</h5>
+                        <label for="cupoActual2" class="form-label">Cupo actual</label>
+                        <input type="text" class="form-control" id="cupoActual2" disabled>
+                        <label for="nuevoCupo2" class="form-label">Nuevo</label>
+                        <input type="text" class="form-control" id="nuevoCupo2">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Módulo</th>
+                                    <th>Cupo Actual</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaVendedor1"></tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Módulo</th>
+                                    <th>Cupo Actual</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaVendedor2"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-3">Grabar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function llenarModal(idLaboratorio, codigoModulo, nombreLaboratorio, nombreModulo) {
+        document.getElementById('laboratorio').value = nombreLaboratorio;
+        document.getElementById('planificacion').value = "Ene-25 a Feb-25";
+        document.getElementById('vendedorA').value = "0912345678";
+        document.getElementById('vendedorB').value = "17234245";
+        document.getElementById('cupoActual1').value = "10'000.000";
+        document.getElementById('cupoActual2').value = "6'000.000";
+    }
+</script>

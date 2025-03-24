@@ -1,0 +1,79 @@
+<!-- Modal con Formulario -->
+<div class="modal fade" id="modalDetalle" data-bs-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <fieldset class="fieldset-floating">
+                    <legend>
+                        <label class="form-check-label" for="ActivoTecnico">Detalles Lote</label>
+                    </legend>
+                    <div class="fieldset-content">
+                        <div class="row g-6">
+                            <div class="col-md-4">
+                                <label for="Lote" class="form-label required">Lote</label>
+                                <input class="form-control" type="text" id="Lote" name="Lote" min="0" max="100" required autofocus />
+                            </div>
+                            <div class="col-md-8">
+                                <label for="Sector" class="form-label required">Sector</label>
+                                <input class="form-control" type="text" id="Sector" name="Sector" min="0" max="250" required autofocus />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="Longitud" class="form-label required">Longitud</label>
+                                <input class="form-control" type="number" id="Longitud" name="Longitud" required autofocus />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="Latitud" class="form-label required">Latitud</label>
+                                <input class="form-control" type="number" id="Latitud" name="Latitud" required autofocus />
+                            </div>
+                            <div class="col-md-12">
+                                <label for="Contacto" class="form-label required">Contacto</label>
+                                <input class="form-control" type="text" min="0" maxlength="250" id="Contacto" name="Contacto" required autofocus />
+                            </div>
+                            <div class="col-md-4">
+                                <label for="Precria" class="form-label required">Precría</label>
+                                <input class="form-control" type="text" min="0" maxlength="250" id="Precria" name="Precria" required autofocus />
+                            </div>
+                            <div class="col-md-8">
+                                <label for="Tanques" class="form-label required">Tanques</label>
+                                <select class="form-select" id="ComboTanques" name="ComboTanques" autofocus tabindex="0"></select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="PlGramoRequerido" class="form-label required">PL/GR Requerido</label>
+                                <input class="form-control" type="number" min="0" id="PlGramoRequerido" name="PlGramoRequerido" required autofocus />
+                            </div>
+                            <div class="col-md-4">
+                                <label for="Salinidad" class="form-label required">Salinidad</label>
+                                <input class="form-control" type="number" min="0" id="Salinidad" name="Salinidad" required autofocus />
+                            </div>
+                            <div class="col-md-4">
+                                <label for="Temperatura" class="form-label required">Temperatura</label>
+                                <input class="form-control" type="number" min="0" id="Temperatura" name="Temperatura" required autofocus />
+                            </div>
+                            <div class="col-md-4">
+                                <label for="NumeroCamiones" class="form-label required">N° Camiones</label>
+                                <input class="form-control" type="number" min="0" id="NumeroCamiones" name="NumeroCamiones" required autofocus />
+                            </div>
+                            <div class="col-md-4">
+                                <label for="NumeroTinas" class="form-label required">N° Tinas</label>
+                                <input class="form-control" type="number" min="0" id="NumeroTinas" name="NumeroTinas" required autofocus />
+                            </div>
+                            <div class="col-md-4">
+                                <label for="NumeroChequeadores" class="form-label required">Chequeadores</label>
+                                <input class="form-control" type="number" min="0" id="NumeroChequeadores" name="NumeroChequeadores" required autofocus />
+                            </div>
+                            <div class="col-md-4">
+                                <label for="ValorKilogramos" class="form-label required">Kilogramos</label>
+                                <input class="form-control" type="number" min="0" id="ValorKilogramos" name="ValorKilogramos" required autofocus />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="modal-footer">
+                <button id="btnCerrarDetalle" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button id="btnAgregarDetalle" type="button" class="btn btn-primary me-3">Agregar Lote</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/asignacionCliente/asignacion-cliente-popup.js"></script>

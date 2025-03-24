@@ -1,0 +1,73 @@
+@model CupoVendedorVm
+@{
+    ViewData["Title"] = "Cupo Vendedor";
+}
+
+@* ************** Content ************** *@
+<div class="row">
+    <!-- Basic Layout -->
+    <div class="col-xxl">
+        <div class="card mb-6">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Cupo Vendedor</h5> <small class="text-muted float-end">@Context.ObtenerNombreModulo(MenuCupoVendedor.CodigoMenu)</small>
+            </div>
+            <div class="card-body pt-1">
+                <div class="row g-12">
+                    <div class="col-md-12 text-danger text-end fw-bold mb-2">
+                        <span>Los campos señalados con * son obligatorios.</span>
+                    </div>
+                </div>
+                <div class="row g-6">
+                    <div class="col-md-6">
+                        <label for="Modulo" class="form-label required">Laboratorio</label>
+                        <input type="hidden" asp-for="IdLaboratorio" id="IdLaboratorio" name="IdLaboratorio" />
+                        <input type="hidden" asp-for="CodigoModuloLaboratorio" id="CodigoModuloLaboratorio" name="CodigoModuloLaboratorio" />
+                        <input asp-for="NombreLaboratorio" class="form-control" type="text" id="NombreLaboratorio"
+                               name="NombreLaboratorio" maxlength="10" required autofocus readonly />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Modulo" class="form-label required">Módulo</label>
+                        <input type="hidden" asp-for="IdModuloLaboratorio" id="IdModuloLaboratorio" name="IdModuloLaboratorio" />
+                        <input asp-for="NombreModuloLaboratorio" class="form-control" type="text" id="NombreModuloLaboratorio"
+                               name="NombreModuloLaboratorio" maxlength="10" required autofocus readonly />
+                    </div>
+
+                    <!-- Botón para abrir el modal -->
+                    <div class="col-md-12 text-end">
+                        <button type="button" class="me-2 mt-1 btn btn-primary btn-sm rounded" data-bs-toggle="modal" data-bs-target="#modalFormulario">
+                            Añadir Vendedor
+                        </button>
+                    </div>
+                    <div class="col-md-12">
+                        <table id="tbVendedores" class="table table-striped" style="width:100%">
+                            <thead>
+                                <tr class="text-nowrap">
+                                    <th class="text-start" style="width:50%">Vendedor</th>
+                                    <th class="text-center" style="width:20%">% Cupo</th>
+                                    <th class="text-start" style="width:10%">Color</th>
+                                    <th class="text-start" style="width:20%">Acciones</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    @await Html.PartialAsync("AgregarVendedorModal")
+                </div>
+                <div class="mt-6">
+                    @if (Context.TienePermiso(MenuCupoVendedor.CodigoMenu, MenuCupoVendedor.Permisos.Editar))
+                    {
+                        <button id="btnEditar" class="btn btn-primary me-3">Guardar Cambios</button>
+                    }
+                    <a asp-action="Index" asp-controller="CupoVendedor" type="reset" class="btn btn-outline-secondary">Regresar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Basic with Icons -->
+</div>
+<script>
+  let isActualizar = true;
+  let cupoVendedor = @Html.Raw(Json.Serialize(this.Model))
+    console.log('-->', cupoVendedor);
+</script>
+<script src="~/js/cupoVendedor/cupoVendedor.js"></script>
+@await Html.PartialAsync("Sections/Toast/_ShowToast")

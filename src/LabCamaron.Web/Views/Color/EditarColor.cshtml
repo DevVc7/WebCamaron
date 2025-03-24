@@ -1,0 +1,64 @@
+@using LabCamaronWeb.Dto.Maestros.Enums
+@model ColorVm
+@{
+    ViewData["Title"] = "Color";
+}
+
+@* ************** Content ************** *@
+<div class="row">
+    <!-- Basic Layout -->
+    <div class="col-xxl">
+        <div class="card mb-6">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Color</h5> <small class="text-muted float-end">@Context.ObtenerNombreModulo(MenuColor.CodigoMenu)</small>
+            </div>
+            <div class="card-body pt-1">
+                <form id="formAccountSettings" method="POST" asp-action="EditarColor" asp-controller="Color">
+                    <div class="row g-12">
+                      <div class="col-md-12 text-danger text-end fw-bold mb-2">
+                        <span>Los campos señalados con * son obligatorios.</span>
+                      </div>
+                    </div>
+                    <div class="row g-6">
+                        <input type="hidden" asp-for="Id" id="Id" name="Id" />
+                        <div class="col-md-6">
+                            <label for="Orden" class="form-label required">Orden</label>
+                            <input asp-for="Orden" class="form-control" type="number" id="Orden" name="Orden" min="0" required autofocus />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Nombre" class="form-label required">Nombre</label>
+                            <input asp-for="Nombre" class="form-control" type="text" id="Nombre"
+                                   name="Nombre" maxlength="150" required autofocus />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Codigo Hexadecimal" class="form-label">Código Hexadecimal</label>
+                            <div class="row g-6">
+                                <div class="col-md-6">
+                                    <input asp-for="CodigoHexadecimal" class="form-control" type="text" name="CodigoHexadecimal" id="CodigoHexadecimal" autofocus />
+                                </div>
+                                <div class="col-md-6">
+                                    <input asp-for="CodigoHexadecimal" type="color" class="form-control form-control-color" id="colorPicker">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="TipoColor" class="form-label required">Tipo Color</label>
+                            <select asp-for="TipoColor" asp-items="Html.GetEnumSelectList<TipoColor>()" class="form-select" id="ComboTipoColor" name="TipoColor" disabled></select>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        @if(Context.TienePermiso(MenuColor.CodigoMenu, MenuColor.Permisos.Editar))
+                        {
+                          <button type="submit" class="btn btn-primary me-3">Guardar Cambios</button>
+                        }
+                        <a asp-action="Index" asp-controller="Color" type="reset" class="btn btn-outline-secondary">Regresar</a>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+    <!-- Basic with Icons -->
+</div>
+<script src="~/js/color/color.js"></script>
+@await Html.PartialAsync("Sections/Toast/_ShowToast")

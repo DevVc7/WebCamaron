@@ -1,0 +1,79 @@
+@model TanqueVm
+@{
+    ViewData["Title"] = "Tanque";
+}
+
+@* ************** Content ************** *@
+<div class="row">
+    <!-- Basic Layout -->
+    <div class="col-xxl">
+        <div class="card mb-6">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Tanques</h5> <small class="text-muted float-end">@Context.ObtenerNombreModulo(MenuTanque.CodigoMenu)</small>
+            </div>
+            <div class="card-body pt-1">
+                <form id="formAccountSettings" asp-action="EditarTanque" asp-controller="Tanque" method="POST">
+                    <div class="row g-12">
+                        <div class="col-md-12 text-danger text-end fw-bold mb-2">
+                            <span>Los campos señalados con * son obligatorios.</span>
+                        </div>
+                    </div>
+                    <div class="row g-6">
+                        <input type="hidden" asp-for="Id" />
+                        <div class="col-md-6">
+                            <label for="Codigo" class="form-label">Código</label>
+                            <input asp-for="Codigo" class="form-control" type="text" id="Codigo"
+                                   name="Codigo" maxlength="10" required autofocus readonly />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Orden" class="form-label required">Orden</label>
+                            <input asp-for="Orden" class="form-control" type="number" id="Orden"
+                                   name="Orden" min="0" required autofocus />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Modulo" class="form-label">Laboratorio</label>
+                            <input type="hidden" asp-for="IdLaboratorio" id="IdLaboratorio" name="IdLaboratorio" />
+                            <input asp-for="NombreLaboratorio" class="form-control" type="text" id="NombreLaboratorio"
+                                   name="NombreLaboratorio" maxlength="10" required autofocus readonly />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Modulo" class="form-label">Módulo</label>
+                            <input type="hidden" asp-for="IdModulo" id="IdModulo" name="IdModulo" />
+                            <input asp-for="NombreModulo" class="form-control" type="text" id="NombreModulo"
+                                   name="NombreModulo" maxlength="10" required autofocus readonly />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Nombre" class="form-label required">Nombre</label>
+                            <input asp-for="Nombre" class="form-control" type="text" id="Nombre"
+                                   name="Nombre" maxlength="150" required autofocus />
+                        </div>
+                        <div class="col-md-12">
+                            <label for="Descripcion" class="form-label">Descripción</label>
+                            <input asp-for="Descripcion" class="form-control" type="text"
+                                   name="Descripcion" id="Descripcion" autofocus />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="NumeroTanque" class="form-label required">Número</label>
+                            <input asp-for="NumeroTanque" class="form-control" type="number"
+                                   name="NumeroTanque" id="NumeroTanque" min="1" max="9999" autofocus required />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="CapacidadLitros" class="form-label required">Capacidad Litros (l)</label>
+                            <input asp-for="CapacidadLitros" class="form-control" type="number" step="0.01"
+                                   name="CapacidadLitros" id="CapacidadLitros" min="0.1" max="999999" autofocus required />
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        @if (Context.TienePermiso(MenuTanque.CodigoMenu, MenuTanque.Permisos.Editar))
+                        {
+                            <button type="submit" class="btn btn-primary me-3">Guardar Cambios</button>
+                        }
+                        <a asp-action="Index" asp-controller="Tanque" type="reset" class="btn btn-outline-secondary">Regresar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Basic with Icons -->
+</div>
+@await Html.PartialAsync("Sections/Toast/_ShowToast")

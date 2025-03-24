@@ -1,0 +1,47 @@
+@model DietaVm
+@{
+    ViewData["Title"] = "Dieta";
+}
+
+@* ************** Content ************** *@
+<div class="row">
+    <!-- Basic Layout -->
+    <div class="col-xxl">
+        <div class="card mb-6">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Dietas</h5> <small class="text-muted float-end">@Context.ObtenerNombreModulo(MenuDieta.CodigoMenu)</small>
+            </div>
+            <div class="card-body pt-1">
+                <form id="formAccountSettings" asp-controller="Dieta" asp-action="EditarDieta" method="POST">
+                    <div class="row g-12">
+                        <div class="col-md-12 text-danger text-end fw-bold mb-2">
+                          <span>Los campos señalados con * son obligatorios.</span>
+                        </div>
+                    </div>
+                    <div class="row g-6">
+                        <div class="col-md-6">
+                            <label for="IdLaboratorio" class="form-label required">Laboratorio</label>
+                            <select class="form-select" asp-for="IdLaboratorio" id="ComboLaboratorio" name="IdLaboratorio"
+                                    data-id="@Model.IdLaboratorio" data-text="@Model.NombreLaboratorio" autofocus required></select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="IdEstadio" class="form-label required">Estadío Larva</label>
+                            <select class="form-select" asp-for="IdEstadio" id="ComboEstadio" name="IdEstadio"
+                                    data-id="@Model.IdEstadio" data-text="@Model.NombreEstadio" autofocus required></select>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        @if(Context.TienePermiso(MenuDieta.CodigoMenu, MenuDieta.Permisos.Editar))
+                        {
+                          <button type="submit" class="btn btn-primary me-3">Editar</button>
+                        }
+                        <a asp-action="Index" asp-controller="Dieta" type="reset" class="btn btn-outline-secondary">Regresar</a>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+    <!-- Basic with Icons -->
+</div>
+<script src="~/js/dieta/dieta.js"></script>
+@await Html.PartialAsync("Sections/Toast/_ShowToast")

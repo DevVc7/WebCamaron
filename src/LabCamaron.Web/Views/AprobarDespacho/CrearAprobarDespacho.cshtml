@@ -1,0 +1,61 @@
+@model AprobarDespachoVm
+@{
+    ViewData["Title"] = "Aprobar Despacho";
+}
+
+@* ************** Content ************** *@
+<div class="row">
+    <!-- Basic Layout -->
+    <div class="col-xxl">
+        <div class="card mb-6">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Aprobar Despacho</h5> <small class="text-muted float-end">@Context.ObtenerNombreModulo(MenuAprobarDespacho.CodigoMenu)</small>
+            </div>
+            <div class="card-body pt-1">
+                <form id="formAccountSettings">
+                    <div class="row g-12">
+                        <div class="col-md-12 text-danger text-end fw-bold mb-2">
+                          <span>Los campos señalados con * son obligatorios.</span>
+                        </div>
+                    </div>
+                    <div class="row g-6">
+                        <div class="col-md-6">
+                            <label for="NombreLaboratorio" class="form-label">Laboratorio</label>
+                            <input class="form-control" asp-for="NombreLaboratorio" id="NombreLaboratorio" name="NombreLaboratorio" readonly>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="IdModulo" class="form-label">Módulo</label>
+                            <input class="form-control" asp-for="NombreModulo" id="NombreModulo" name="NombreModulo" readonly>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="NumeroLote" class="form-label required">Lote</label>
+                            <input class="form-control" asp-for="NumeroLote" id="NumeroLote" name="NumeroLote" required autofocus>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="NombrePrecrias" class="form-label">Precrías</label>
+                            <input class="form-control" asp-for="NombrePrecrias" id="NombrePrecrias" name="NombrePrecrias" readonly>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="NombreEnteVendedor" class="form-label">Vendedor</label>
+                            <input class="form-control" asp-for="NombreEnteVendedor" id="NombreEnteVendedor" name="NombreEnteVendedor" readonly>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="FechaAprobacion" class="form-label required">Fecha - Hora Despacho</label>
+                            <input type="datetime-local" class="form-control" asp-for="FechaAprobacion" id="FechaAprobacion" name="FechaAprobacion" required>
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        @if (Context.TienePermiso(MenuAprobarDespacho.CodigoMenu, MenuAprobarDespacho.Permisos.Crear))
+                        {
+                            <button id="botonCrearNuevo" type="submit" asp-controller="AprobarDespacho" asp-action="CrearAprobarDespacho" class="btn btn-primary me-3">Crear</button>
+                        }
+                        <a asp-action="Index" asp-controller="AprobarDespacho" type="reset" class="btn btn-outline-secondary">Regresar</a>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+    <!-- Basic with Icons -->
+</div>
+@await Html.PartialAsync("Sections/Toast/_ShowToast")

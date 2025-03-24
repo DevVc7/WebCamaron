@@ -1,0 +1,111 @@
+@model List<AprobarDespachoVm>
+@{
+    ViewData["Title"] = "Aprobar Despacho";
+}
+
+@* ************** Content ************** *@
+<div class="row">
+    <!-- Basic Layout -->
+    <div class="col-xxl">
+        <div class="card mb-6">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Aprobar Despacho</h5> <small class="text-muted float-end">@Context.ObtenerNombreModulo(MenuAprobarDespacho.CodigoMenu)</small>
+            </div>
+            <div class="card-body pt-1 table-responsive text-nowrap">
+                <table id="prueba" class="table table-striped" style="width:100%">
+                    <thead>
+                        <tr class="text-nowrap">
+                            <th class="text-center" style="width:10%">N°</th>
+                            <th class="text-start" style="width:20%">Laboratorio</th>
+                            <th class="text-start" style="width:20%">Módulo</th>
+                            <th class="text-start" style="width:20%">Vendedor</th>
+                            <th class="text-start" style="width:20%">Lote</th>
+                            <th class="text-start" style="width:20%">Fecha Aprobacion</th>
+                            <th class="text-start" style="width:25%">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            var asignacin = Model.ElementAt(i);
+                            <tr>
+                                <td class="text-center">@(i + 1)</td>
+                                <td class="text-start">@asignacin.NombreLaboratorio</td>
+                                <td class="text-start">@asignacin.NombreModulo</td>
+                                <td class="text-start">@asignacin.NombreEnteVendedor</td>
+                                <td class="text-start">@asignacin.NumeroLote</td>
+                                <td class="text-start">@asignacin.FechaAprobacion.ToLocalTime()</td>
+                                <td class="text-start">
+                                    @* @if (Context.TienePermiso(MenuAprobarDespacho.CodigoMenu, MenuAprobarDespacho.Permisos.Editar))
+                                    {
+                                        <a class="btn btn-sm btn-primary" asp-controller="AprobarDespacho" asp-action="EditarAprobarDespacho" asp-route-id="@asignacin.Id">Editar</a>
+                                    } *@
+                                    @if (Context.TienePermiso(MenuAprobarDespacho.CodigoMenu, MenuAprobarDespacho.Permisos.Eliminar))
+                                    {
+                                        <form asp-controller="AprobarDespacho" asp-action="EliminarAprobarDespacho" method="post" style="display:inline;">
+                                            <input type="hidden" name="Id" id="Id" value="@asignacin.Id" />
+                                            <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                                        </form>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Basic with Icons -->
+</div>
+@await Html.PartialAsync("Sections/Toast/_ShowToast")
+<script>
+    const puedeCrear = @Html.Raw(JsonConvert.SerializeObject(Context.TienePermiso(MenuAprobarDespacho.CodigoMenu, MenuAprobarDespacho.Permisos.Crear)));
+    let botones = [];
+
+    if(puedeCrear){
+      botones.push({
+        text: '<i class="bx bx-plus-circle"></i> Agregar',
+        className: 'me-2 mt-1 btn btn-primary btn-sm rounded',
+        action: function (e, dt, node, config) {
+          window.location.href = '/AprobarDespacho/CrearAprobarDespacho';
+        }
+      });
+    }
+
+    botones.push({
+      extend: 'excelHtml5',
+      title: 'Exportación de Aprobar Despacho',
+      text: '<i class="bx bxs-download"></i> Exportar xls',
+      className: 'me-2 mt-1 btn btn-success btn-sm rounded'
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        $('#prueba').DataTable({
+            dom: '<"d-flex justify-content-between align-items-center mb-3"Bf>rt<"d-flex justify-content-between align-items-center mt-3"lip>', // Personaliza el layout
+            buttons: botones,
+            lengthMenu: [5, 10, 25, 50, 100],
+            pageLength: 5,
+            language: {
+                decimal: "",
+                emptyTable: "No hay información",
+                info: "Mostrando _START_ a _END_ de _TOTAL_ registros",
+                infoEmpty: "Mostrando 0 to 0 de 0 Entradas",
+                infoFiltered: "(Filtrado de _MAX_ total entradas)",
+                lengthMenu: "Mostrar  _MENU_",
+                loadingRecords: "Cargando...",
+                processing: "Procesando...",
+                search: "Buscar:",
+                zeroRecords: "Sin resultados encontrados",
+                paginate: {
+                    first: "<i class='bx bx-chevrons-left'></i>",
+                    last: "<i class='bx bx-chevrons-right'></i>",
+                    next: "<i class='bx bx-chevron-right'></i>",
+                    previous: "<i class='bx bx-chevron-left'></i>"
+                }
+            }
+        });
+    });
+
+</script>

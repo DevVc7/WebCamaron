@@ -1,0 +1,31 @@
+<!-- Modal con Formulario -->
+<div class="modal fade" id="modalDetalle" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            @* <div class="modal-header">
+                <h5 class="modal-title">Registro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div> *@
+            <div class="modal-body">
+                <fieldset class="fieldset-floating">
+                    <legend>
+                        <label class="form-check-label" for="ActivoTecnico">Detalles Insumo</label>
+                    </legend>
+                    <div class="fieldset-content">
+                        <div class="row g-6">
+                            <div class="col-md-6">
+                                <label for="Cupo" class="form-label required">Cupo</label>
+                                <input class="form-control" type="number" id="Cupo" name="Cupo" min="0" max="100" required autofocus />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button id="btnAgregarDetalle" type="button" class="btn btn-primary me-3">Agregar Detalle</button>
+            </div>
+        </div>
+    </div>
+</div>
+@* <script src="~/js/cupoVendedor/cupoVendedor-popup.js"></script> *@
