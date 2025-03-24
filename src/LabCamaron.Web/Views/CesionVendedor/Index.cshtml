@@ -1,96 +1,114 @@
 @model List<ModuloLaboratorioVm>
 @{
-    ViewData["Title"] = "Cupo vendedor";
+    ViewData["Title"] = "CupoVendedor";
 }
 
+@* ************** Content ************** *@
 <div class="row">
+    <!-- Basic Layout -->
     <div class="col-xxl">
         <div class="card mb-6">
             <div class="card-header d-flex align-items-center justify-content-between">
-                <h5 class="mb-0">Cupo Vendedor</h5>
-                <small class="text-muted float-end">@Context.ObtenerNombreModulo(MenuCupoVendedor.CodigoMenu)</small>
+                <h5 class="mb-0">CupoVendedor</h5> <small class="text-muted float-end">Nombre del Módulo</small>
             </div>
-            <div class="card-body pt-1 table-responsive text-nowrap">
-                <table id="prueba" class="table table-striped" style="width:100%">
-                    <thead>
-                        <tr class="text-nowrap">
-                            <th class="text-center" style="width:10%">N°</th>
-                            <th class="text-start" style="width:10%">Laboratorio</th>
-                            <th class="text-start" style="width:10%">Módulo</th>
-                            <th class="text-start" style="width:15%">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-border-bottom-0">
-                        @for (int i = 0; i < Model.Count; i++)
-                        {
-                            var rol = Model.ElementAt(i);
-                            <tr>
-                                <td class="text-center">@(i + 1)</td>
-                                <td class="text-start">@rol.NombreLaboratorio</td>
-                                <td class="text-start">@rol.Nombre</td>
-                                <td class="text-start">
-                                    @if (Context.TienePermiso(MenuCupoVendedor.CodigoMenu, MenuCupoVendedor.Permisos.Editar))
-                                    {
-                                        <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalCederCupo" onclick="llenarModal('@rol.IdLaboratorio', '@rol.Codigo', '@rol.NombreLaboratorio', '@rol.Nombre')">
-                                            Ceder Cupo
-                                        </button>
-                                    }
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
+            <div class="card-body pt-1">
+                <form id="formAccountSettings" method="POST">
+                    <div class="row g-12">
+                        <div class="col-md-12 text-danger text-end fw-bold mb-2">
+                            <span>Los campos señalados con * son obligatorios.</span>
+                        </div>
+                    </div>
+                    <div class="row g-6">
+                        <input type="hidden" id="Id" name="Id" />
+                        <div class="col-md-6">
+                            <label for="Nombre" class="form-label required">Nombre</label>
+                            <input class="form-control" type="text" id="Nombre" name="Nombre" maxlength="150" required autofocus />
+                        </div>
+                        <div class="col-md-12">
+                            <label for="Descripcion" class="form-label">Descripción</label>
+                            <input class="form-control" type="text" name="Descripcion" id="Descripcion" autofocus />
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button type="submit" class="btn btn-primary me-3">Guardar Cambios</button>
+                        <button type="reset" class="btn btn-outline-secondary">Regresar</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+    <!-- Basic with Icons -->
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="modalCederCupo" tabindex="-1" aria-labelledby="modalCederCupoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalCederCupoLabel">Ceder Cupo</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+<!-- Mostrar los modales sin necesidad de activación -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceder Cupo Vendedor</title>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header text-center">
+                <h5>Ceder Cupo Vendedor</h5>
             </div>
-            <div class="modal-body">
-                <div class="row mb-3">
-                    <div class="col-md-3">
-                        <label for="laboratorio" class="form-label">Laboratorio</label>
-                        <input type="text" class="form-control" id="laboratorio" disabled>
-                    </div>
-                    <div class="col-md-3">
+            <div class="card-body">
+                <div class="row mb-3 text-center p-2 rounded">
+                    <div class="col-md-6">
                         <label for="planificacion" class="form-label">Planificación</label>
-                        <input type="text" class="form-control" id="planificacion" disabled>
+                        <input type="text" class="form-control text-center" id="planificacion" value="Ene-25 a Feb-25" disabled>
                     </div>
-                    <div class="col-md-3">
-                        <label for="vendedorA" class="form-label">Vendedor A</label>
-                        <input type="text" class="form-control" id="vendedorA" disabled>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="vendedorB" class="form-label">Vendedor B</label>
-                        <input type="text" class="form-control" id="vendedorB" disabled>
+                    <div class="col-md-6">
+                        <label for="laboratorio" class="form-label">Laboratorio</label>
+                        <input type="text" class="form-control text-center" id="laboratorio" value="LAB001" disabled>
                     </div>
                 </div>
-                <div class="row mb-3">
+
+                <div class="row mb-3 text-center">
                     <div class="col-md-6">
-                        <h5 class="text-center">VENDEDOR 1</h5>
-                        <label for="cupoActual1" class="form-label">Cupo actual</label>
-                        <input type="text" class="form-control" id="cupoActual1" disabled>
-                        <label for="nuevoCupo1" class="form-label">Nuevo</label>
-                        <input type="text" class="form-control" id="nuevoCupo1">
+                        <label class="form-label">Vendedor A</label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <select class="form-select text-center" id="nombreVendedorA">
+                                    <option value="" disabled selected>Seleccione</option>
+                                    <option value="Jaime Medina" data-codigo="222222222">Jaime Medina</option>
+                                    <option value="Lupita Guadalupe" data-codigo="333333333">Lupita Guadalupe</option>
+                                    <option value="Dipper Antonio" data-codigo="111111111">Dipper Antonio</option>
+                                    <option value="Lucas Renato" data-codigo="444444444">Lucas Renato</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control text-center" id="codigoVendedorA" placeholder="Código" readonly>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="col-md-6">
-                        <h5 class="text-center">VENDEDOR 2</h5>
-                        <label for="cupoActual2" class="form-label">Cupo actual</label>
-                        <input type="text" class="form-control" id="cupoActual2" disabled>
-                        <label for="nuevoCupo2" class="form-label">Nuevo</label>
-                        <input type="text" class="form-control" id="nuevoCupo2">
+                        <label class="form-label">Vendedor B</label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <select class="form-select text-center" id="nombreVendedorB">
+                                    <option value="" disabled selected>Seleccione</option>
+                                    <option value="Jaime Medina" data-codigo="222222222">Jaime Medina</option>
+                                    <option value="Lupita Guadalupe" data-codigo="333333333">Lupita Guadalupe</option>
+                                    <option value="Dipper Antonio" data-codigo="111111111">Dipper Antonio</option>
+                                    <option value="Lucas Renato" data-codigo="444444444">Lucas Renato</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control text-center" id="codigoVendedorB" placeholder="Código" readonly>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="row mt-3">
-                    <div class="col-md-6">
-                        <table class="table">
+
+                <div class="row">
+                    <div class="col-md-6 border p-3">
+                        <h5 class="text-center" id="vendedor1Nombre">VENDEDOR 1</h5>
+                        <table class="table table-bordered text-center">
                             <thead>
                                 <tr>
                                     <th>Módulo</th>
@@ -98,11 +116,28 @@
                                     <th>Acción</th>
                                 </tr>
                             </thead>
-                            <tbody id="tablaVendedor1"></tbody>
+                            <tbody>
+                                <tr>
+                                    <td>xxxxxx 1</td>
+                                    <td>10'000.000</td>
+                                    <td><a href="#">Editar</a></td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxxx 2</td>
+                                    <td>7'000.000</td>
+                                    <td><a href="#">Editar</a></td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxxx 3</td>
+                                    <td>4'000.000</td>
+                                    <td><a href="#">Editar</a></td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
-                    <div class="col-md-6">
-                        <table class="table">
+                    <div class="col-md-6 border p-3">
+                        <h5 class="text-center" id="vendedor2Nombre">VENDEDOR 2</h5>
+                        <table class="table table-bordered text-center">
                             <thead>
                                 <tr>
                                     <th>Módulo</th>
@@ -110,23 +145,116 @@
                                     <th>Acción</th>
                                 </tr>
                             </thead>
-                            <tbody id="tablaVendedor2"></tbody>
+                            <tbody>
+                                <tr>
+                                    <td>xxxxxxxxxx 1</td>
+                                    <td>2'000.000</td>
+                                    <td><a href="#">Editar</a></td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxxxxxxx 2</td>
+                                    <td>2'000.000</td>
+                                    <td><a href="#">Editar</a></td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxxxxxxx 3</td>
+                                    <td>5'000.000</td>
+                                    <td><a href="#">Editar</a></td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary w-100 mt-3">Grabar</button>
+
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-primary">Grabar</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<script>
-    function llenarModal(idLaboratorio, codigoModulo, nombreLaboratorio, nombreModulo) {
-        document.getElementById('laboratorio').value = nombreLaboratorio;
-        document.getElementById('planificacion').value = "Ene-25 a Feb-25";
-        document.getElementById('vendedorA').value = "0912345678";
-        document.getElementById('vendedorB').value = "17234245";
-        document.getElementById('cupoActual1').value = "10'000.000";
-        document.getElementById('cupoActual2').value = "6'000.000";
-    }
-</script>
+    <script>
+        function actualizarOpciones() {
+            let vendedorA = document.getElementById("nombreVendedorA").value;
+            let vendedorB = document.getElementById("nombreVendedorB").value;
+            let opcionesA = document.querySelectorAll("#nombreVendedorA option:not([disabled])");
+            let opcionesB = document.querySelectorAll("#nombreVendedorB option:not([disabled])");
+
+            opcionesA.forEach(op => {
+                op.hidden = op.value && op.value === vendedorB;
+            });
+            opcionesB.forEach(op => {
+                op.hidden = op.value && op.value === vendedorA;
+            });
+        }
+
+        document.getElementById("nombreVendedorA").addEventListener("change", function() {
+            let selectedOption = this.options[this.selectedIndex];
+            document.getElementById("codigoVendedorA").value = selectedOption.getAttribute("data-codigo") || "";
+            actualizarOpciones();
+        });
+
+        document.getElementById("nombreVendedorB").addEventListener("change", function() {
+            let selectedOption = this.options[this.selectedIndex];
+            document.getElementById("codigoVendedorB").value = selectedOption.getAttribute("data-codigo") || "";
+            actualizarOpciones();
+        });
+
+        actualizarOpciones();
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function actualizarOpciones() {
+                let vendedorA = document.getElementById("nombreVendedorA").value;
+                let vendedorB = document.getElementById("nombreVendedorB").value;
+                let opcionesA = document.querySelectorAll("#nombreVendedorA option:not([disabled])");
+                let opcionesB = document.querySelectorAll("#nombreVendedorB option:not([disabled])");
+
+                opcionesA.forEach(op => {
+                    op.hidden = op.value && op.value === vendedorB;
+                });
+                opcionesB.forEach(op => {
+                    op.hidden = op.value && op.value === vendedorA;
+                });
+            }
+
+            document.getElementById("nombreVendedorA").addEventListener("change", function () {
+                let selectedOption = this.options[this.selectedIndex];
+                let codigoInput = document.getElementById("codigoVendedorA");
+                let nombreHeader = document.getElementById("vendedor1Nombre");
+
+                if (selectedOption.value) {
+                    codigoInput.value = selectedOption.getAttribute("data-codigo") || "";
+                    nombreHeader.textContent = selectedOption.value;
+                } else {
+                    codigoInput.value = "";
+                    nombreHeader.textContent = "VENDEDOR 1";
+                }
+
+                actualizarOpciones();
+            });
+
+            document.getElementById("nombreVendedorB").addEventListener("change", function () {
+                let selectedOption = this.options[this.selectedIndex];
+                let codigoInput = document.getElementById("codigoVendedorB");
+                let nombreHeader = document.getElementById("vendedor2Nombre");
+
+                if (selectedOption.value) {
+                    codigoInput.value = selectedOption.getAttribute("data-codigo") || "";
+                    nombreHeader.textContent = selectedOption.value;
+                } else {
+                    codigoInput.value = "";
+                    nombreHeader.textContent = "VENDEDOR 2";
+                }
+
+                actualizarOpciones();
+            });
+
+            actualizarOpciones();
+        });
+    </script>
+
+
+
+</body>
+</html>
