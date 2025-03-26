@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\Documents\\GitHub\\xd\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E530B55C-F68D-40E8-A767-5088EF6E2232}|src\\LabCamaronWeb.Servicios\\LabCamaronWeb.Servicios.csproj|c:\\users\\usuario\\documents\\github\\xd\\src\\labcamaronweb.servicios\\maestros\\servicesconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E530B55C-F68D-40E8-A767-5088EF6E2232}|src\\LabCamaronWeb.Servicios\\LabCamaronWeb.Servicios.csproj|solutionrelative:src\\labcamaronweb.servicios\\maestros\\servicesconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FE402C8F-FE68-4826-9DF0-F38873E23F9F}|src\\LabCamaron.Web\\LabCamaron.Web.csproj|c:\\users\\usuario\\documents\\github\\xd\\src\\labcamaron.web\\controllers\\cesionvendedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE402C8F-FE68-4826-9DF0-F38873E23F9F}|src\\LabCamaron.Web\\LabCamaron.Web.csproj|solutionrelative:src\\labcamaron.web\\controllers\\cesionvendedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE402C8F-FE68-4826-9DF0-F38873E23F9F}|src\\LabCamaron.Web\\LabCamaron.Web.csproj|c:\\users\\usuario\\documents\\github\\xd\\src\\labcamaron.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FE402C8F-FE68-4826-9DF0-F38873E23F9F}|src\\LabCamaron.Web\\LabCamaron.Web.csproj|solutionrelative:src\\labcamaron.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E530B55C-F68D-40E8-A767-5088EF6E2232}|src\\LabCamaronWeb.Servicios\\LabCamaronWeb.Servicios.csproj|c:\\users\\usuario\\documents\\github\\xd\\src\\labcamaronweb.servicios\\maestros\\servicios\\secupovendedorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E530B55C-F68D-40E8-A767-5088EF6E2232}|src\\LabCamaronWeb.Servicios\\LabCamaronWeb.Servicios.csproj|solutionrelative:src\\labcamaronweb.servicios\\maestros\\servicios\\secupovendedorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E530B55C-F68D-40E8-A767-5088EF6E2232}|src\\LabCamaronWeb.Servicios\\LabCamaronWeb.Servicios.csproj|c:\\users\\usuario\\documents\\github\\xd\\src\\labcamaronweb.servicios\\maestros\\servicesconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E530B55C-F68D-40E8-A767-5088EF6E2232}|src\\LabCamaronWeb.Servicios\\LabCamaronWeb.Servicios.csproj|solutionrelative:src\\labcamaronweb.servicios\\maestros\\servicesconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE402C8F-FE68-4826-9DF0-F38873E23F9F}|src\\LabCamaron.Web\\LabCamaron.Web.csproj|c:\\users\\usuario\\documents\\github\\xd\\src\\labcamaron.web\\controllers\\cupovendedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,24 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\xd\\src\\LabCamaron.Web\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\LabCamaron.Web\\appsettings.json",
-              "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\xd\\src\\LabCamaron.Web\\appsettings.json",
-              "RelativeToolTip": "src\\LabCamaron.Web\\appsettings.json",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAMwHwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-22T06:38:59.053Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ServicesConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\xd\\src\\LabCamaronWeb.Servicios\\Maestros\\ServicesConfiguration.cs",
               "RelativeDocumentMoniker": "src\\LabCamaronWeb.Servicios\\Maestros\\ServicesConfiguration.cs",
@@ -66,14 +49,13 @@
               "RelativeDocumentMoniker": "src\\LabCamaronWeb.Servicios\\Maestros\\Servicios\\SeCupoVendedorService.cs",
               "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\xd\\src\\LabCamaronWeb.Servicios\\Maestros\\Servicios\\SeCupoVendedorService.cs",
               "RelativeToolTip": "src\\LabCamaronWeb.Servicios\\Maestros\\Servicios\\SeCupoVendedorService.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAUwDYAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAIAzwEgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T06:16:47.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T06:16:47.991Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "CupoVendedorController.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\xd\\src\\LabCamaron.Web\\Controllers\\CupoVendedorController.cs",
               "RelativeDocumentMoniker": "src\\LabCamaron.Web\\Controllers\\CupoVendedorController.cs",
@@ -81,21 +63,19 @@
               "RelativeToolTip": "src\\LabCamaron.Web\\Controllers\\CupoVendedorController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAADwvxUAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T06:16:14.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T06:16:14.218Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CesionVendedorController.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\xd\\src\\LabCamaron.Web\\Controllers\\CesionVendedorController.cs",
               "RelativeDocumentMoniker": "src\\LabCamaron.Web\\Controllers\\CesionVendedorController.cs",
               "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\xd\\src\\LabCamaron.Web\\Controllers\\CesionVendedorController.cs",
               "RelativeToolTip": "src\\LabCamaron.Web\\Controllers\\CesionVendedorController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAUwCcAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAnwB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T05:56:48.045Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T05:56:48.045Z"
             }
           ]
         }

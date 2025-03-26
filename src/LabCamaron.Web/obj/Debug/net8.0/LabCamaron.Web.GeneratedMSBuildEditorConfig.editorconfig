@@ -1,0 +1,493 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = LabCamaron.Web
+build_property.RootNamespace = LabCamaron.Web
+build_property.ProjectDir = C:\Users\Usuario\Documents\GitHub\LabCamaronWeb\src\LabCamaron.Web\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Usuario\Documents\GitHub\LabCamaronWeb\src\LabCamaron.Web
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/AprobarDespacho/CrearAprobarDespacho.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXByb2JhckRlc3BhY2hvXENyZWFyQXByb2JhckRlc3BhY2hvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/AprobarDespacho/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXByb2JhckRlc3BhY2hvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/AsignacionCliente/AgregarLoteModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hY2lvbkNsaWVudGVcQWdyZWdhckxvdGVNb2RhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/AsignacionCliente/CrearAsignacionCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hY2lvbkNsaWVudGVcQ3JlYXJBc2lnbmFjaW9uQ2xpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/AsignacionCliente/EditarAsignacionCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hY2lvbkNsaWVudGVcRWRpdGFyQXNpZ25hY2lvbkNsaWVudGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/AsignacionCliente/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hY2lvbkNsaWVudGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Cargo/EditarCargo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZ29cRWRpdGFyQ2FyZ28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Cargo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZ29cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Categoria/CrearCategoria.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXENyZWFyQ2F0ZWdvcmlhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Categoria/EditarCategoria.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXEVkaXRhckNhdGVnb3JpYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Categoria/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/CesionCupoVendedor/GestionarCupoVendedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VzaW9uQ3Vwb1ZlbmRlZG9yXEdlc3Rpb25hckN1cG9WZW5kZWRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/CesionCupoVendedor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VzaW9uQ3Vwb1ZlbmRlZG9yXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Cliente/AgregarContactoModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxBZ3JlZ2FyQ29udGFjdG9Nb2RhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Cliente/CrearCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDcmVhckNsaWVudGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Cliente/EditarCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxFZGl0YXJDbGllbnRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Cliente/FormularioEditarCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxGb3JtdWxhcmlvRWRpdGFyQ2xpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Cliente/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Color/CrearColor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sb3JcQ3JlYXJDb2xvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Color/EditarColor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sb3JcRWRpdGFyQ29sb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Color/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sb3JcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Comercial/PlanificacionSiembra/CrearPlanificacionSiembra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tZXJjaWFsXFBsYW5pZmljYWNpb25TaWVtYnJhXENyZWFyUGxhbmlmaWNhY2lvblNpZW1icmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Comercial/PlanificacionSiembra/EditarPlanificacionSiembra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tZXJjaWFsXFBsYW5pZmljYWNpb25TaWVtYnJhXEVkaXRhclBsYW5pZmljYWNpb25TaWVtYnJhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Comercial/PlanificacionSiembra/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tZXJjaWFsXFBsYW5pZmljYWNpb25TaWVtYnJhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Comercial/PlanificacionSiembra/ModalDetallesPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tZXJjaWFsXFBsYW5pZmljYWNpb25TaWVtYnJhXE1vZGFsRGV0YWxsZXNQYXJ0aWFsVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/CupoVendedor/AgregarVendedorModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vwb1ZlbmRlZG9yXEFncmVnYXJWZW5kZWRvck1vZGFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/CupoVendedor/EditarCupoVendedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vwb1ZlbmRlZG9yXEVkaXRhckN1cG9WZW5kZWRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/CupoVendedor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vwb1ZlbmRlZG9yXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Dieta/AgregarInsumoModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldGFcQWdyZWdhckluc3Vtb01vZGFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Dieta/CrearDieta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldGFcQ3JlYXJEaWV0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Dieta/EditarDieta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldGFcRWRpdGFyRGlldGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Dieta/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Empresa/CrearEmpresa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYVxDcmVhckVtcHJlc2EuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Empresa/EditarEmpresa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYVxFZGl0YXJFbXByZXNhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Empresa/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/EstadioLarva/CrearEstadioLarva.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRpb0xhcnZhXENyZWFyRXN0YWRpb0xhcnZhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/EstadioLarva/EditarEstadioLarva.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRpb0xhcnZhXEVkaXRhckVzdGFkaW9MYXJ2YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/EstadioLarva/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRpb0xhcnZhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/FuncionTecnico/CrearFuncionTecnico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvblRlY25pY29cQ3JlYXJGdW5jaW9uVGVjbmljby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/FuncionTecnico/EditarFuncionTecnico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvblRlY25pY29cRWRpdGFyRnVuY2lvblRlY25pY28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/FuncionTecnico/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvblRlY25pY29cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Home/ErrorAutorizacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvckF1dG9yaXphY2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Home/ErrorComun.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvckNvbXVuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Home/ErrorMantenimiento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvck1hbnRlbmltaWVudG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Horas/CrearHoras.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXNcQ3JlYXJIb3Jhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Horas/EditarHoras.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXNcRWRpdGFySG9yYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Horas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Insumos/CrearInsumos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdW1vc1xDcmVhckluc3Vtb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Insumos/EditarInsumos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdW1vc1xFZGl0YXJJbnN1bW9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Insumos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdW1vc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Laboratorio/CrearLaboratorio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFib3JhdG9yaW9cQ3JlYXJMYWJvcmF0b3Jpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Laboratorio/EditarLaboratorio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFib3JhdG9yaW9cRWRpdGFyTGFib3JhdG9yaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Laboratorio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFib3JhdG9yaW9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Login/ForgotPasswordBasic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRm9yZ290UGFzc3dvcmRCYXNpYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Login/RegisterBasic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVnaXN0ZXJCYXNpYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Marca/CrearMarca.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFyY2FcQ3JlYXJNYXJjYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Marca/EditarMarca.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFyY2FcRWRpdGFyTWFyY2EuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Marca/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFyY2FcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/MenuGeneral/EditarUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUdlbmVyYWxcRWRpdGFyVXN1YXJpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Menu/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/ModuloLaboratorio/CrearModuloLaboratorio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kdWxvTGFib3JhdG9yaW9cQ3JlYXJNb2R1bG9MYWJvcmF0b3Jpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/ModuloLaboratorio/EditarModuloLaboratorio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kdWxvTGFib3JhdG9yaW9cRWRpdGFyTW9kdWxvTGFib3JhdG9yaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/ModuloLaboratorio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kdWxvTGFib3JhdG9yaW9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Pages/MiscError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcTWlzY0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Pages/MiscUnderMaintenance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcTWlzY1VuZGVyTWFpbnRlbmFuY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/ParametroAmbiental/CrearParametroAmbiental.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyYW1ldHJvQW1iaWVudGFsXENyZWFyUGFyYW1ldHJvQW1iaWVudGFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/ParametroAmbiental/EditarParametroAmbiental.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyYW1ldHJvQW1iaWVudGFsXEVkaXRhclBhcmFtZXRyb0FtYmllbnRhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/ParametroAmbiental/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyYW1ldHJvQW1iaWVudGFsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Produccion/Siembra/CrearSiembra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjY2lvblxTaWVtYnJhXENyZWFyU2llbWJyYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Produccion/Siembra/EditarSiembra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjY2lvblxTaWVtYnJhXEVkaXRhclNpZW1icmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Produccion/Siembra/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjY2lvblxTaWVtYnJhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Rol/CrearRol.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sXENyZWFyUm9sLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Rol/EditarPermisos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sXEVkaXRhclBlcm1pc29zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Rol/EditarRol.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sXEVkaXRhclJvbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Rol/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Shared/Sections/Footer/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNlY3Rpb25zXEZvb3RlclxfRm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Shared/Sections/Menu/_VerticalMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNlY3Rpb25zXE1lbnVcX1ZlcnRpY2FsTWVudS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Shared/Sections/Navbar/_Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNlY3Rpb25zXE5hdmJhclxfTmF2YmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Shared/Sections/Navbar/_NavbarPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNlY3Rpb25zXE5hdmJhclxfTmF2YmFyUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Shared/Sections/Toast/_RigthTopToast.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNlY3Rpb25zXFRvYXN0XF9SaWd0aFRvcFRvYXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Shared/Sections/Toast/_ShowToast.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNlY3Rpb25zXFRvYXN0XF9TaG93VG9hc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Shared/Sections/_Scripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNlY3Rpb25zXF9TY3JpcHRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Shared/Sections/_ScriptsIncludes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNlY3Rpb25zXF9TY3JpcHRzSW5jbHVkZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Shared/Sections/_Styles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNlY3Rpb25zXF9TdHlsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Shared/Sections/_Variables.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNlY3Rpb25zXF9WYXJpYWJsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Shared/_BlankLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CbGFua0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Shared/_CommonMasterLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Db21tb25NYXN0ZXJMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Shared/_ContentNavbarLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Db250ZW50TmF2YmFyTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Tanque/CrearTanque.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFucXVlXENyZWFyVGFucXVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Tanque/EditarTanque.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFucXVlXEVkaXRhclRhbnF1ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Tanque/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFucXVlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Tecnico/CrearTecnico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjbmljb1xDcmVhclRlY25pY28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Tecnico/EditarTecnico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjbmljb1xFZGl0YXJUZWNuaWNvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Tecnico/FormularioEditarTecnico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjbmljb1xGb3JtdWxhcmlvRWRpdGFyVGVjbmljby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Tecnico/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjbmljb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/UnidadMedida/CrearUnidadMedida.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pZGFkTWVkaWRhXENyZWFyVW5pZGFkTWVkaWRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/UnidadMedida/EditarUnidadMedida.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pZGFkTWVkaWRhXEVkaXRhclVuaWRhZE1lZGlkYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/UnidadMedida/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pZGFkTWVkaWRhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Usuario/CrearUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmVhclVzdWFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Usuario/EditarRoles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0YXJSb2xlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Usuario/EditarUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0YXJVc3VhcmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Usuario/FormularioAccionUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xGb3JtdWxhcmlvQWNjaW9uVXN1YXJpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Usuario/FormularioEditarModulo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xGb3JtdWxhcmlvRWRpdGFyTW9kdWxvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Usuario/FormularioEditarRol.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xGb3JtdWxhcmlvRWRpdGFyUm9sLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Usuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Vendedor/CrearVendedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGVkb3JcQ3JlYXJWZW5kZWRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Vendedor/EditarVendedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGVkb3JcRWRpdGFyVmVuZGVkb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Vendedor/FormularioEditarVendedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGVkb3JcRm9ybXVsYXJpb0VkaXRhclZlbmRlZG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/Vendedor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVuZGVkb3JcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/_Partials/_Macros.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1BhcnRpYWxzXF9NYWNyb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/GitHub/LabCamaronWeb/src/LabCamaron.Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
