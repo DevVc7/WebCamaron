@@ -64,7 +64,8 @@
             const latitud = parseFloat($("#Latitud").val() || 0);
             const nombreContacto = $("#Contacto").val();
             const nombrePrecria = $("#Precria").val();
-            const plGramoRequerido = parseFloat($("#PlGramoRequerido").val() || 0);
+            const plGramo1 = parseFloat($("#PlGramo1").val() || 0);
+            const plGramo2 = parseFloat($("#PlGramo2").val() || 0);
             const salinidad = parseFloat($("#Salinidad").val() || 0);
             const temperatura = parseFloat($("#Temperatura").val() || 0);
             const numeroCamiones = parseFloat($("#NumeroCamiones").val() || 0);
@@ -103,7 +104,8 @@
                         latitud,
                         nombreContacto,
                         nombrePrecria,
-                        plGramoRequerido,
+                        plGramo1,
+                        plGramo2,
                         salinidad,
                         temperatura,
                         numeroCamiones,
@@ -122,7 +124,8 @@
                         nombresTanques: nombresTanques,
                         salinidad: salinidad,
                         temperatura: temperatura,
-                        plGramoRequerido: plGramoRequerido,
+                        plGramo1: plGramo1,
+                        plGramo2: plGramo2,
                         numeroTinas: numeroTinas,
                         numeroCamiones: numeroCamiones,
                         acciones: `<div class="d-flex gap-2">
@@ -143,7 +146,8 @@
                     nombresTanques: `${nombresTanques}`,
                     salinidad: `${salinidad}`,
                     temperatura: `${temperatura}`,
-                    plGramoRequerido: `${plGramoRequerido}`,
+                    plGramo1: `${plGramo1}`,
+                    plGramo2: `${plGramo2}`,
                     numeroTinas: `${numeroTinas}`,
                     numeroCamiones: `${numeroCamiones}`,
                     acciones: `<div class="d-flex gap-2">
@@ -162,7 +166,8 @@
                     latitud: latitud,
                     nombreContacto: nombreContacto,
                     nombrePrecria: nombrePrecria,
-                    plGramoRequerido: plGramoRequerido,
+                    plGramo1: plGramo1,
+                    plGramo2: plGramo2,
                     salinidad: salinidad,
                     temperatura: temperatura,
                     numeroCamiones: numeroCamiones,
@@ -192,7 +197,8 @@
             $("#Latitud").val('');
             $("#Contacto").val('');
             $("#Precria").val('');
-            $("#PlGramoRequerido").val('');
+            $("#PlGramo1").val('');
+            $("#PlGramo2").val('');
             $("#Salinidad").val('');
             $("#Temperatura").val('');
             $("#NumeroCamiones").val('');

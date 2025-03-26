@@ -15,6 +15,10 @@ namespace LabCamaronWeb.Dto.Maestros.Cargo
         {
             public long? Id { get; set; }
         }
+        public class ConsultarCargoCodigo
+        {
+            public string? Codigo { get; set; }
+        }
 
         public class ConsultarTodosCargo
         {

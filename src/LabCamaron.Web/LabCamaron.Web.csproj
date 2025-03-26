@@ -68,4 +68,9 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Comercial\" />
+    <Folder Include="wwwroot\js\comercial\" />
+  </ItemGroup>
+
 </Project>

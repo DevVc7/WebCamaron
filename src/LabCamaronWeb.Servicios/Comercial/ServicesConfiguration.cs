@@ -11,7 +11,7 @@ namespace LabCamaronWeb.Servicios.Comercial
             services.AddScoped<ISePlanificacionSiembraService, SePlanificacionSiembraService>();
             services.AddScoped<ISeAsignacionClienteService, SeAsignacionClienteService>();
             services.AddScoped<ISeAprobarDespachoService, SeAprobarDespachoService>();
-
+            services.AddScoped<ISeModuloCesionService, SeModuloCesionService>();
             return services;
         }
     }

@@ -1,0 +1,55 @@
+@model List<AsignacionClienteVm>
+@{
+    ViewData["Title"] = "Cesión Cupo Vendedor";
+}
+
+@* ************** Content ************** *@
+<div class="row">
+    <!-- Basic Layout -->
+    <div class="col-xxl">
+        <div class="card mb-6">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Cesión Cupo Vendedor</h5> <small class="text-muted float-end">@Context.ObtenerNombreModulo(MenuCesionCupoVendedor.CodigoMenu)</small>
+            </div>
+            <div class="card-body pt-1 table-responsive text-nowrap">
+                <table id="prueba" class="table table-striped" style="width:100%">
+                    <thead>
+                        <tr class="text-nowrap">
+                            <th class="text-center" style="width:10%">N°</th>
+                            <th class="text-start" style="width:15%">Planificación</th>
+                            <th class="text-start" style="width:20%">Laboratorio</th>
+                            <th class="text-start" style="width:20%">Módulo</th>
+                            <th class="text-start" style="width:20%">Vendedor</th>
+                            <th class="text-start" style="width:25%">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            var asignacin = Model.ElementAt(i);
+                            <tr>
+                                <td class="text-center">@(i + 1)</td>
+                                <td class="text-start">@asignacin.DescripcionPlanificacion</td>
+                                <td class="text-start">@asignacin.NombreLaboratorio</td>
+                                <td class="text-start">@asignacin.NombreModulo</td>
+                                <td class="text-start">@asignacin.NombreEnteVendedor</td>
+                                <td class="text-start">
+                                    @if (Context.TienePermiso(MenuCesionCupoVendedor.CodigoMenu, MenuCesionCupoVendedor.Permisos.Editar))
+                                    {
+                                        <a class="btn btn-sm btn-primary" asp-controller="CesionCupoVendedor" asp-action="EditarAsignacionCliente" asp-route-id="@asignacin.Id">Gestionar Cupo</a>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Basic with Icons -->
+</div>
+@await Html.PartialAsync("Sections/Toast/_ShowToast")
+<script>
+</script>

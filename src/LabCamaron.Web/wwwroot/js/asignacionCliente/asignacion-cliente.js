@@ -8,38 +8,66 @@ let arrayDetalle = [];
         const laboratorioSelectedId = $('#ComboLaboratorio').data('id');
         const laboratorioSelectedText = $('#ComboLaboratorio').data('text');
 
-        $('#ComboLaboratorio').select2({
-            theme: "bootstrap-5",
-            language: "es",
-            allowClear: true,
-            placeholder: 'Selecciona un elemento',
-            ajax: {
-                url: '/ComboLaboratorio/ListarLaboratorios',
-                dataType: 'json',
-                delay: 250,
-                data: function(params) {
-                    return {
-                        textoContiene: params.term
-                    };
-                },
-                processResults: function(data) {
-                    return {
-                        results: data
-                    };
+        // El combo tiene datos
+        if (laboratorioSelectedId) {
+            $('#ComboLaboratorio').select2({
+                theme: "bootstrap-5",
+                language: "es",
+                allowClear: true,
+                placeholder: 'Selecciona un elemento',
+                ajax: {
+                    url: '/ComboLaboratorio/ListarLaboratorios',
+                    dataType: 'json',
+                    delay: 250,
+                    data: function(params) {
+                        return {
+                            textoContiene: params.term
+                        };
+                    },
+                    processResults: function(data) {
+                        return {
+                            results: data
+                        };
+                    }
                 }
-            }
-        });
+            });
+        } else {
+            $.ajax({
+                url: '/ComboLaboratorio/ListarLaboratorios', // Tu API que devuelve los laboratorios
+                dataType: 'json',
+                success: function(data) {
+                    let $select = $('#ComboLaboratorio');
+                    $select.empty().append('<option value="">Selecciona un laboratorio</option>');
 
+                    data.forEach(item => {
+                        let newOption = new Option(item.text, item.id, false, false);
+                        $select.append(newOption);
+                    });
+
+                    $select.select2({
+                        theme: "bootstrap-5",
+                        language: "es",
+                        allowClear: true,
+                        placeholder: 'Selecciona un laboratorio'
+                    });
+
+                    // Seleccionar automáticamente el primer elemento después de cargar los datos
+                    if (data.length > 0) {
+                        $select.val(data[0].id).trigger('change');
+                    }
+                },
+                error: function() {
+                    toastDangerShow("Error al cargar los datos del laboratorio.");
+                }
+            });
+        }
+
+        // Si hay valores preseleccionados, añádelos y selecciónalos
         if (laboratorioSelectedId && laboratorioSelectedText) {
             const preselectedOption = new Option(laboratorioSelectedText, laboratorioSelectedId, true, true);
             $('#ComboLaboratorio').append(preselectedOption).trigger('change');
         }
 
-        // Cambiar combo laboratorio
-        $('#ComboLaboratorio').on('change', function() {
-            const laboratorioId = $(this).val(); // Obtener el id de la laboratorio seleccionada
-            actualizarModuloLaboratorios(laboratorioId); // Llamar a la función para actualizar las moduloLaboratorios
-        });
 
         // Inicializar el combo de moduloLaboratorios
         const moduloLaboratorioSelectedId = $('#ComboModulo').data('id');
@@ -72,6 +100,12 @@ let arrayDetalle = [];
             const preselectedOption = new Option(moduloLaboratorioSelectedText, moduloLaboratorioSelectedId, true, true);
             $('#ComboModulo').append(preselectedOption).trigger('change');
         }
+
+        // Cambiar combo laboratorio
+        $('#ComboLaboratorio').on('change', function() {
+            const laboratorioId = $(this).val(); // Obtener el id de la laboratorio seleccionada
+            actualizarModuloLaboratorios(laboratorioId); // Llamar a la función para actualizar las moduloLaboratorios
+        });
 
         // Función para actualizar las moduloLaboratorios al cambiar de laboratorio
         function actualizarModuloLaboratorios(laboratorioId) {
@@ -138,27 +172,82 @@ let arrayDetalle = [];
         const comboVendedorSelectedId = $('#ComboVendedor').data('id');
         const comboVendedorSelectedText = $('#ComboVendedor').data('text');
 
-        $('#ComboVendedor').select2({
-            theme: "bootstrap-5",
-            language: "es",
-            allowClear: true,
-            placeholder: 'Selecciona un elemento',
-            ajax: {
-                url: '/ComboEnte/ListarEntesVendedor',
-                dataType: 'json',
-                delay: 250,
-                data: function(params) {
-                    return {
-                        textoContiene: params.term
-                    };
-                },
-                processResults: function(data) {
-                    return {
-                        results: data
-                    };
+        //$('#ComboVendedor').select2({
+        //    theme: "bootstrap-5",
+        //    language: "es",
+        //    allowClear: true,
+        //    placeholder: 'Selecciona un elemento',
+        //    ajax: {
+        //        url: '/ComboEnte/ListarEntesVendedorUsuarioSistema',
+        //        dataType: 'json',
+        //        delay: 250,
+        //        data: function(params) {
+        //            return {
+        //                textoContiene: params.term
+        //            };
+        //        },
+        //        processResults: function(data) {
+        //            return {
+        //                results: data
+        //            };
+        //        }
+        //    }
+        //});
+
+
+        if (comboVendedorSelectedId) {
+            $('#ComboVendedor').select2({
+                theme: "bootstrap-5",
+                language: "es",
+                allowClear: true,
+                placeholder: 'Selecciona un elemento',
+                ajax: {
+                    url: '/ComboEnte/ListarEntesVendedorUsuarioSistema',
+                    dataType: 'json',
+                    delay: 250,
+                    data: function(params) {
+                        return {
+                            textoContiene: params.term
+                        };
+                    },
+                    processResults: function(data) {
+                        return {
+                            results: data
+                        };
+                    }
                 }
-            }
-        });
+            });
+        } else {
+            $.ajax({
+                url: '/ComboEnte/ListarEntesVendedorUsuarioSistema',
+                dataType: 'json',
+                success: function(data) {
+                    let $select = $('#ComboVendedor');
+                    $select.empty().append('<option value="">Selecciona un registro</option>');
+
+                    data.forEach(item => {
+                        let newOption = new Option(item.text, item.id, false, false);
+                        $select.append(newOption);
+                    });
+
+                    $select.select2({
+                        theme: "bootstrap-5",
+                        language: "es",
+                        allowClear: true,
+                        placeholder: 'Selecciona un vendedor'
+                    });
+
+                    // Seleccionar automáticamente el primer elemento después de cargar los datos
+                    if (data.length > 0) {
+                        $select.val(data[0].id).trigger('change');
+                    }
+                },
+                error: function() {
+                    toastDangerShow("Error al cargar los datos del vendedor.");
+                }
+            });
+        }
+
 
         if (comboVendedorSelectedId && comboVendedorSelectedText) {
             const preselectedOption = new Option(comboVendedorSelectedText, comboVendedorSelectedId, true, true);
@@ -225,6 +314,7 @@ let arrayDetalle = [];
                     { className: "text-start", targets: 8 },
                     { className: "text-start", targets: 9 },
                     { className: "text-start", targets: 10 },
+                    { className: "text-start", targets: 11 },
                 ],
                 columns: [
                     { data: "orden" },
@@ -234,7 +324,8 @@ let arrayDetalle = [];
                     { data: "nombresTanques" },
                     { data: "salinidad" },
                     { data: "temperatura" },
-                    { data: "plGramoRequerido" },
+                    { data: "plGramo1" },
+                    { data: "plGramo2" },
                     { data: "numeroTinas" },
                     { data: "numeroCamiones" },
                     { data: "acciones", orderable: false }
@@ -288,7 +379,8 @@ let arrayDetalle = [];
             $("#Latitud").val(detalle.latitud);
             $("#Contacto").val(detalle.nombreContacto);
             $("#Precria").val(detalle.nombrePrecria);
-            $("#PlGramoRequerido").val(detalle.plGramoRequerido);
+            $("#PlGramo1").val(detalle.plGramo1);
+            $("#PlGramo2").val(detalle.plGramo2);
             $("#Salinidad").val(detalle.salinidad);
             $("#Temperatura").val(detalle.temperatura);
             $("#NumeroCamiones").val(detalle.numeroCamiones);
@@ -416,7 +508,8 @@ let arrayDetalle = [];
                     latitud: detalle.latitud,
                     nombreContacto: detalle.nombreContacto,
                     nombrePrecria: detalle.nombrePrecria,
-                    plGramoRequerido: detalle.plGramoRequerido,
+                    plGramo1: detalle.plGramo1,
+                    plGramo2: detalle.plGramo2,
                     salinidad: detalle.salinidad,
                     temperatura: detalle.temperatura,
                     numeroCamiones: detalle.numeroCamiones,
@@ -433,7 +526,8 @@ let arrayDetalle = [];
                     nombresTanques: `${detalle.nombresTanques}`,
                     salinidad: `${detalle.salinidad}`,
                     temperatura: `${detalle.temperatura}`,
-                    plGramoRequerido: `${detalle.plGramoRequerido}`,
+                    plGramo1: `${detalle.plGramo1}`,
+                    plGramo2: `${detalle.plGramo2}`,
                     numeroTinas: `${detalle.numeroTinas}`,
                     numeroCamiones: `${detalle.numeroCamiones}`,
                     acciones: `<div class="d-flex gap-2">

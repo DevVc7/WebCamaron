@@ -1,0 +1,107 @@
+@model ClienteVm.Detallado
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+@* ************** Content ************** *@
+<div class="row">
+    <!-- Basic Layout -->
+    <div class="col-xxl">
+        <div class="card mb-6">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Clientes</h5> <small class="text-muted float-end">@Context.ObtenerNombreModulo(MenuCliente.CodigoMenu)</small>
+            </div>
+            <div class="card-body pt-1">
+                <div class="nav-align-top nav-tabs-shadow mb-6">
+                    <ul class="nav nav-tabs nav-fill" role="tablist">
+                        <li class="nav-item">
+                            <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-datos-generales" aria-controls="navs-datos-generales" aria-selected="false"><span class="d-none d-sm-block"><i class="tf-icons bx bx-user bx-sm me-1_5 align-text-bottom"></i>Datos Generales</span><i class="bx bx-sm bx-user d-sm-none"></i></button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="navs-datos-generales" role="tabpanel">
+                            <form id="formAccountSettings" asp-controller="Cliente" asp-action="CrearCliente" method="POST">
+                                <div class="row g-12">
+                                    <div class="col-md-12 text-danger text-end fw-bold mb-2">
+                                        <span>Los campos señalados con * son obligatorios.</span>
+                                    </div>
+                                </div>
+                                <div class="row g-6">
+                                    <div class="col-md-6">
+                                        <label for="TipoIdentificacion" class="form-label required">Tipo Identificación</label>
+                                        <select id="TipoIdentificacion" asp-for="TipoIdentificacion" name="TipoIdentificacion" class="form-control" required>
+                                          <option value="@ConstantesTipoIdentificacion.Cedula">CÉDULA</option>
+                                          <option value="@ConstantesTipoIdentificacion.Ruc">RUC</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="Identificacion" class="form-label required">Identificación</label>
+                                        <input asp-for="Identificacion" class="form-control" type="text" id="Identificacion"
+                                               name="Identificacion" min="10" maxlength="13" required autofocus />
+                                    </div>                                        
+                                    <div class="col-md-12">
+                                        <label for="RazonSocial" class="form-label required">Razón Social</label>
+                                        <input asp-for="RazonSocial" class="form-control" type="text" id="RazonSocial"
+                                               name="RazonSocial" maxlength="250" required autofocus />
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="RazonComercial" class="form-label">Razón Comercial</label>
+                                        <input asp-for="RazonComercial" class="form-control" type="text" id="RazonComercial"
+                                               name="RazonComercial" maxlength="250" autofocus />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="Telefono" class="form-label required">Teléfono</label>
+                                        <input asp-for="Telefono" class="form-control" type="text" id="Telefono"
+                                               name="Telefono" placeholder="00000000" maxlength="9" required autofocus />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="Celular" class="form-label required">Celular</label>
+                                        <input asp-for="Celular" class="form-control" type="text" id="Celular"
+                                               name="Celular" placeholder="0900000000" maxlength="10" required autofocus />
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="Correos" class="form-label">Correos</label>
+                                        <input asp-for="Correos" class="form-control" type="text"
+                                               name="Correos" placeholder="ejemplo@mail.com;ejemplo2@mail.com" maxlength="500" id="Correos" autofocus />
+                                    </div>
+                                    <input type="hidden" id="Contactos" name="Contactos" value="@string.Join("|", Model.Contactos.Select(e => e.NombreContacto))" />
+                                    <div class="col-md-12 text-end">
+                                        <button type="button" id="btnContacto" class="me-2 mt-1 btn btn-primary btn-sm rounded">
+                                            Agregar Contacto
+                                        </button>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <table id="tbDetalles" class="table table-striped" style="width:100%">
+                                            <thead>
+                                                <tr class="text-nowrap">
+                                                    <th class="text-start" style="width:10%">N°</th>
+                                                    <th class="text-start" style="width:65%">Contacto</th>
+                                                    <th class="text-center" style="width:25%">Acciones</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="mt-6">
+                                    @if (Context.TienePermiso(MenuCliente.CodigoMenu, MenuCliente.Permisos.Crear))
+                                    {
+                                        <button type="submit" class="btn btn-primary me-3">Crear</button>
+                                    }
+                                    <a asp-action="Index" asp-controller="Cliente" type="reset" class="btn btn-outline-secondary">Regresar</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Basic with Icons -->
+</div>
+@await Html.PartialAsync("AgregarContactoModal")
+<script>
+    let tablaDetalles;
+    let detalles = @Html.Raw(Json.Serialize(this.Model.Contactos))
+</script>
+<script src="~/js/cliente/cliente-general.js"></script>
+@await Html.PartialAsync("Sections/Toast/_ShowToast")

@@ -35,6 +35,23 @@ namespace LabCamaronWeb.Servicios.Maestros.Servicios
             {
                 var respuesta = await _operacionHttp
                     .EjecutarServicioAutenticado<CargoVm.ConsultarCargo, RespuestaConsultaGenericaVm<CargoVm>>(
+                        _configuration["Microservicios:ConsultarCargoId"]!, consultar);
+
+                return respuesta;
+            }
+            catch (Exception ex)
+            {
+                LogUtils.LogError(ex, consultar);
+                return new(RespuestaGenericaVm.Excepcion());
+            }
+        }
+
+        public async Task<RespuestaConsultaGenericaVm<CargoVm>> ConsultarPorCodigo(CargoVm.ConsultarCargoCodigo consultar)
+        {
+            try
+            {
+                var respuesta = await _operacionHttp
+                    .EjecutarServicioAutenticado<CargoVm.ConsultarCargoCodigo, RespuestaConsultaGenericaVm<CargoVm>>(
                         _configuration["Microservicios:ConsultarCargoCodigo"]!, consultar);
 
                 return respuesta;

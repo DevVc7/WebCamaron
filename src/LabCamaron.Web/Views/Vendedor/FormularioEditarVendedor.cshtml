@@ -1,0 +1,68 @@
+@model PersonalVm
+
+<form id="formAccountSettings" asp-action="EditarVendedor" asp-controller="Vendedor" method="POST">
+    <div class="row g-12">
+        <div class="col-md-12 text-danger text-end fw-bold mb-2">
+            <span>Los campos señalados con * son obligatorios.</span>
+        </div>
+    </div>
+    <div class="row g-6">
+        <input type="hidden" asp-for="Id" />
+        <div class="col-12 col-md-6 mb-3">
+            <label for="TipoIdentificacion" class="form-label required">Tipo</label>
+            <input asp-for="TipoIdentificacion" class="form-control" type="text" id="TipoIdentificacion"
+                   name="TipoIdentificacion" min="10" maxlength="10" readonly autofocus />
+        </div>
+        <div class="col-12 col-md-6 mb-3">
+            <label for="Identificacion" class="form-label">Identificación</label>
+            <input asp-for="Identificacion" class="form-control" type="text" id="Identificacion"
+                   name="Identificacion" min="10" maxlength="10" readonly autofocus />
+        </div>
+        <div class="col-md-12">
+            <label for="Nombres" class="form-label required">Nombres</label>
+            <input asp-for="Nombres" class="form-control" type="text" id="Nombres"
+                   name="Nombres" maxlength="250" required autofocus />
+        </div>
+        <div class="col-md-6">
+            <label for="Telefono" class="form-label required">Teléfono</label>
+            <input asp-for="Telefono" class="form-control" type="text" id="Telefono"
+                   name="Telefono" placeholder="00000000" maxlength="9" required autofocus />
+        </div>
+        <div class="col-md-6">
+            <label for="Celular" class="form-label required">Celular</label>
+            <input asp-for="Celular" class="form-control" type="text" id="Celular"
+                   name="Celular" placeholder="0900000000" maxlength="10" required autofocus />
+        </div>
+        <div class="col-md-12">
+            <label for="Correos" class="form-label">Correos</label>
+            <input asp-for="Correos" class="form-control" type="text"
+                   name="Correos" placeholder="ejemplo@mail.com;ejemplo2@mail.com" maxlength="500" id="Correos" autofocus />
+        </div>
+
+
+        <div class="col-md-6">
+            <input type="hidden" asp-for="CodigoCargo" name="CodigoCargo" />
+            <label for="NombreCargo" class="form-label">Cargo</label>
+            <input asp-for="NombreCargo" class="form-control" type="text" id="NombreCargo"
+                   name="NombreCargo" autofocus readonly />
+        </div>
+        <div class="col-md-6">
+            <label for="IdsFunciones" class="form-label required">Función Técnico</label>
+            <select class="form-select" asp-for="IdsFunciones" id="ComboFuncionVendedor" name="IdsFuncionesArray[]"
+                    data-id="@Model.IdsFunciones" data-text="@Model.NombresFunciones" autofocus required></select>
+        </div>
+
+        <div class="col-md-6">
+            <label for="UsuarioSistema" class="form-label required">Usuario Sistema</label>
+            <select class="form-select" asp-for="UsuarioSistema" id="ComboUsuarioSistema" name="UsuarioSistema"
+                    data-id="@Model.UsuarioSistema" data-text="@Model.UsuarioSistema" autofocus required></select>
+        </div>
+    </div>
+    <div class="mt-6">
+        @if (Context.TienePermiso(MenuVendedor.CodigoMenu, MenuVendedor.Permisos.Editar))
+        {
+            <button type="submit" class="btn btn-primary me-3">Guardar Cambios</button>
+        }
+        <a asp-action="Index" asp-controller="Vendedor" type="reset" class="btn btn-outline-secondary">Regresar</a>
+    </div>
+</form>

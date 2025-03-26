@@ -9,6 +9,7 @@ namespace LabCamaronWeb.Dto.Comercial.PlanificacionSiembra
         public long IdLaboratorio { get; set; }
         public string NombreLaboratorio { get; set; } = string.Empty;
         public DateTime FechaPlanificacion { get; set; }
+        public string Codigo { get; set; } = string.Empty;
         public bool Activo { get; set; }
         public PlanificacionSiembraDetalleVm[] PlanificacionSiembraDetalle { get; set; } = [];
 
@@ -46,6 +47,7 @@ namespace LabCamaronWeb.Dto.Comercial.PlanificacionSiembra
             [Required(ErrorMessage = "Laboratorio es obligatorio")]
             public long? IdLaboratorio { get; set; }
 
+            public string Codigo { get; set; } = string.Empty;
             [Required(ErrorMessage = "Fecha planificación es obligatorio")]
             public DateTime FechaPlanificacion { get; set; }
 
@@ -61,6 +63,7 @@ namespace LabCamaronWeb.Dto.Comercial.PlanificacionSiembra
             [Required(ErrorMessage = "Laboratorio es obligatorio")]
             public long? IdLaboratorio { get; set; }
 
+            public string Codigo { get; set; } = string.Empty;
             [Required(ErrorMessage = "Fecha planificación es obligatorio")]
             public DateTime FechaPlanificacion { get; set; }
 

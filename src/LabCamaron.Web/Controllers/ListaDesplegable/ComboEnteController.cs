@@ -1,16 +1,17 @@
 using LabCamaron.Web.Models;
+using LabCamaronWeb.Infraestructura.Constantes;
 using LabCamaronWeb.Infraestructura.Constantes.Procesos;
 using LabCamaronWeb.Infraestructura.Utilidades.Logger;
 using LabCamaronWeb.Servicios.Maestros.Interfaces;
+using LabCamaronWeb.Infraestructura.Extensiones;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace LabCamaron.Web.Controllers.ListaDesplegable
 {
-    public class ComboEnteController(ISeEnteService seEnteService) : BaseController
+    public class ComboEnteController(ISeClienteService seClienteServices, ISePersonalService sePersonalService, IHttpContextAccessor contextAccessor) : BaseController
     {
-        private readonly ISeEnteService _seEnteService = seEnteService;
 
         [HttpGet]
         [Authorize]
@@ -18,8 +19,9 @@ namespace LabCamaron.Web.Controllers.ListaDesplegable
         {
             try
             {
-                var consulta = await _seEnteService.ConsultarVendedores(new()
+                var consulta = await sePersonalService.ConsultarTodos(new()
                 {
+                    CodigoCargo = ConstantesCargo.Vendedor,
                     SoloActivos = true
                 });
 
@@ -30,7 +32,7 @@ namespace LabCamaron.Web.Controllers.ListaDesplegable
                         .Select(x => new ComboBoxCatalogoModel()
                         {
                             Id = x.Id,
-                            Text = x.TipoEntidad == ConstantesTipoEntidad.Juridica ? x.RazonSocial : x.NombresCompletos,
+                            Text = x.Nombres
                         })
                         .OrderBy(e => e.Text)
                         .ToList();
@@ -56,53 +58,6 @@ namespace LabCamaron.Web.Controllers.ListaDesplegable
                 return StatusCode((int)HttpStatusCode.InternalServerError, "Ha ocurrido un error");
             }
         }
-
-        [HttpGet]
-        [Authorize]
-        public async Task<IActionResult> ListarEnteSinRol(string rolExcluir, string textoContiene)
-        {
-            try
-            {
-                var consulta = await _seEnteService.ConsultarTodosSinRol(new()
-                {
-                    RolExcluir = rolExcluir,
-                    SoloActivos = true
-                });
-
-                List<ComboBoxCatalogoModel> resultado = [];
-                if (consulta.Respuesta.EsExitosa)
-                {
-                    resultado = consulta.Resultados!
-                        .Select(x => new ComboBoxCatalogoModel()
-                        {
-                            Id = x.Id,
-                            Text = x.TipoEntidad == ConstantesTipoEntidad.Juridica ? x.RazonSocial : x.NombresCompletos,
-                        })
-                        .OrderBy(e => e.Text)
-                        .ToList();
-
-                    if (!string.IsNullOrEmpty(textoContiene))
-                    {
-                        resultado = resultado
-                            .Where(x => x.Text.Contains(textoContiene, StringComparison.OrdinalIgnoreCase))
-                            .OrderBy(e => e.Text)
-                            .ToList();
-                    }
-
-                    return Ok(resultado);
-                }
-                else
-                {
-                    return Ok(resultado);
-                }
-            }
-            catch (Exception ex)
-            {
-                LogUtils.LogError(ex);
-                return StatusCode((int)HttpStatusCode.InternalServerError, "Ha ocurrido un error");
-            }
-        }
-
 
         [HttpGet]
         [Authorize]
@@ -110,7 +65,7 @@ namespace LabCamaron.Web.Controllers.ListaDesplegable
         {
             try
             {
-                var consulta = await _seEnteService.ConsultarClientes(new()
+                var consulta = await seClienteServices.ConsultarTodos(new()
                 {
                     SoloActivos = true
                 });
@@ -122,7 +77,7 @@ namespace LabCamaron.Web.Controllers.ListaDesplegable
                         .Select(x => new ComboBoxCatalogoModel()
                         {
                             Id = x.Id,
-                            Text = x.TipoEntidad == ConstantesTipoEntidad.Juridica ? x.RazonSocial : x.NombresCompletos,
+                            Text = x.RazonSocial,
                         })
                         .OrderBy(e => e.Text)
                         .ToList();
@@ -155,10 +110,11 @@ namespace LabCamaron.Web.Controllers.ListaDesplegable
         {
             try
             {
-                var consulta = await _seEnteService.ConsultarTecnicos(new()
+                var consulta = await sePersonalService.ConsultarTodos(new()
                 {
-                    IdModulo = idModulo??0,
-                    SoloActivos = true
+                    CodigoCargo = ConstantesCargo.Tecnico,
+                    SoloActivos = true,
+                    IdModulo = idModulo,
                 });
 
                 List<ComboBoxCatalogoModel> resultado = [];
@@ -168,7 +124,55 @@ namespace LabCamaron.Web.Controllers.ListaDesplegable
                         .Select(x => new ComboBoxCatalogoModel()
                         {
                             Id = x.Id,
-                            Text = x.TipoEntidad == ConstantesTipoEntidad.Juridica ? x.RazonSocial : x.NombresCompletos,
+                            Text = x.Nombres,
+                        })
+                        .OrderBy(e => e.Text)
+                        .ToList();
+
+                    if (!string.IsNullOrEmpty(textoContiene))
+                    {
+                        resultado = resultado
+                            .Where(x => x.Text.Contains(textoContiene, StringComparison.OrdinalIgnoreCase))
+                            .OrderBy(e => e.Text)
+                            .ToList();
+                    }
+
+                    return Ok(resultado);
+                }
+                else
+                {
+                    return Ok(resultado);
+                }
+            }
+            catch (Exception ex)
+            {
+                LogUtils.LogError(ex);
+                return StatusCode((int)HttpStatusCode.InternalServerError, "Ha ocurrido un error");
+            }
+        }
+
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> ListarEntesVendedorUsuarioSistema(string textoContiene)
+        {
+            try
+            {
+                var codigoUsuario = HttpContext.Session.Obtener<string>(SesionConstantes.CodigoUsuario);
+                var consulta = await sePersonalService.ConsultarTodos(new()
+                {
+                    CodigoCargo = ConstantesCargo.Vendedor,
+                    SoloActivos = true,
+                    UsuarioSistema = codigoUsuario
+                });
+
+                List<ComboBoxCatalogoModel> resultado = [];
+                if (consulta.Respuesta.EsExitosa)
+                {
+                    resultado = consulta.Resultados!
+                        .Select(x => new ComboBoxCatalogoModel()
+                        {
+                            Id = x.Id,
+                            Text = x.Nombres,
                         })
                         .OrderBy(e => e.Text)
                         .ToList();

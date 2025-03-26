@@ -12,8 +12,7 @@ using System.Net;
 namespace LabCamaron.Web.Controllers.ListaDesplegable
 {
     [Route("ComboPlanificacionSiembra")]
-    public class ComboPlanificacionSiembraController(ISePlanificacionSiembraService sePlanificacionSiembra,
-        ISeModuloLaboratorioService _seModuloLaboratorioService) : BaseController
+    public class ComboPlanificacionSiembraController(ISePlanificacionSiembraService sePlanificacionSiembra) : BaseController
     {
         [HttpGet("ListarPlanificacionSiembra")]
         [Authorize]
@@ -23,47 +22,18 @@ namespace LabCamaron.Web.Controllers.ListaDesplegable
             {
                 var consulta = await sePlanificacionSiembra.ConsultarTodos(new()
                 {
-                    
+                    SoloActivos = true
                 });
 
-                var modulos = await _seModuloLaboratorioService
-                  .ConsultarTodos(new LabCamaronWeb.Dto.Parametrizacion.ModuloLaboratorio.ModuloLaboratorioVm.ConsultarTodosModuloLaboratorio()
-                  {
-                      SoloActivos = true
-                  });
-
-                List<SiembraVm> dataList = [];
-                Random random = new Random(); // Instancia de Random
-                int i = 0;
-                foreach (var item in modulos.Resultados)
-                {
-                    i++;
-                    var texto = "" + i;
-                    dataList.Add(new SiembraVm()
-                    {
-                        Id = i,
-                        NombreLaboratorio = item.NombreLaboratorio,
-                        NombreModulo = item.Nombre,
-                        Codigo = texto.PadLeft(2, '0'),
-                        CantidadBruta = random.Next(2000, 5000), // Número entero entre 2000 y 5000
-                        CantidadFacturada = random.Next(1000, 3000), // Número entero entre 1000 y 3000
-                        Densidad = (decimal)Math.Round(random.NextDouble() * (3.5 - 1.5) + 1.5, 3),
-                        FechaPlanificacion = DateTime.Now,
-                    });
-                }
-
-
-
                 List<ComboBoxCatalogoModel> resultado = [];
-                //if (consulta.Respuesta.EsExitosa)
-                if (true)
+                if (consulta.Respuesta.EsExitosa)
                 {
                     //resultado = consulta.Resultados!
-                    resultado = dataList
+                    resultado = (consulta.Resultados ?? [])
                         .Select(x => new ComboBoxCatalogoModel()
                         {
                             Id = x.Id,
-                            Text = $"{x.Codigo} - {x.FechaPlanificacion:dd/MM/yyyy}",
+                            Text = $"{x.Codigo}",
                         })
                         .OrderBy(e => e.Text)
                         .ToList();

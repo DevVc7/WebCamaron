@@ -39,6 +39,7 @@ public class LoginController(ISeLoginService seUsuario) : Controller
 
             HttpContext.Session.Agregar(SesionConstantes.IdentificadorSesion, respuesta.IdentificadorSesion);
             HttpContext.Session.Agregar(SesionConstantes.JwtToken, respuesta.Jwt);
+            HttpContext.Session.Agregar(SesionConstantes.CodigoUsuario, respuesta.Permisos.Usuario.Codigo);
             HttpContext.Session.Agregar(SesionConstantes.Usuario, respuesta.Permisos.Usuario);
             HttpContext.Session.Agregar(SesionConstantes.Modulos, respuesta.Permisos.Modulos);
             HttpContext.Session.Agregar(SesionConstantes.Permisos, respuesta.Permisos.Detalles);

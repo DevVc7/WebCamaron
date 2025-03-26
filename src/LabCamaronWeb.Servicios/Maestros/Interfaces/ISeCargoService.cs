@@ -7,6 +7,7 @@ namespace LabCamaronWeb.Servicios.Maestros.Interfaces
     public interface ISeCargoService
     {
         Task<RespuestaConsultaGenericaVm<CargoVm>> ConsultarPorId(ConsultarCargo consultar);
+        Task<RespuestaConsultaGenericaVm<CargoVm>> ConsultarPorCodigo(ConsultarCargoCodigo consultar);
 
         Task<RespuestaConsultasGenericaVm<CargoVm>> ConsultarTodos(ConsultarTodosCargo consultar);
 

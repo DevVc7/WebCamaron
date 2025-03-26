@@ -13,7 +13,8 @@ namespace LabCamaronWeb.Dto.Comercial.AsignacionCliente
         public string NombrePrecria { get; set; } = string.Empty;
         public string IdsTanque { get; set; } = string.Empty;
         public string NombresTanques { get; set; } = string.Empty;
-        public decimal PlGramoRequerido { get; set; }
+        public decimal PlGramo1 { get; set; }
+        public decimal PlGramo2 { get; set; }
         public decimal Salinidad { get; set; }
         public decimal Temperatura { get; set; }
         public int NumeroCamiones { get; set; }
@@ -44,8 +45,10 @@ namespace LabCamaronWeb.Dto.Comercial.AsignacionCliente
             [Required(ErrorMessage = "Tanques es obligatorio")]
             public string? IdsTanque { get; set; }
 
-            [Required(ErrorMessage = "Pl/Gramos es obligatorio")]
-            public decimal? PlGramoRequerido { get; set; }
+            [Required(ErrorMessage = "Pl/Gramos 1 es obligatorio")]
+            public decimal? PlGramo1 { get; set; }
+            [Required(ErrorMessage = "Pl/Gramos 2 es obligatorio")]
+            public decimal? PlGramo2 { get; set; }
 
             [Required(ErrorMessage = "Salinidad es obligatorio")]
             public decimal? Salinidad { get; set; }

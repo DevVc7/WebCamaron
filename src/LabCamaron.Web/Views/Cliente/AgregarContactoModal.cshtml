@@ -1,0 +1,27 @@
+<!-- Modal con Formulario -->
+<div class="modal fade" id="modalDetalle" data-bs-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <fieldset class="fieldset-floating">
+                    <legend>
+                        <label class="form-check-label" for="ActivoTecnico">Contactos</label>
+                    </legend>
+                    <div class="fieldset-content">
+                        <div class="row g-6">
+                            <div class="col-md-12">
+                                <label for="nombreContacto" class="form-label required">Contacto</label>
+                                <input class="form-control" type="text" id="nombreContacto" name="nombreContacto" min="0" max="150" required autofocus />
+                            </div>                            
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="modal-footer">
+                <button id="btnCerrarDetalle" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button id="btnAgregarDetalle" type="button" class="btn btn-primary me-3">Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/cliente/contacto-cliente-popup.js"></script>
