@@ -1,9 +1,0 @@
-C:\Users\Usuario\Documents\GitHub\LabCamaronWeb\src\LabCamaron.Web\wwwroot\js\ente\ente-general.js
-C:\Users\Usuario\Documents\GitHub\LabCamaronWeb\src\LabCamaron.Web\wwwroot\js\ente\ente-roles.js
-C:\Users\Usuario\Documents\GitHub\LabCamaronWeb\src\LabCamaron.Web\wwwroot\js\enteCliente\ente-cliente.js
-C:\Users\Usuario\Documents\GitHub\LabCamaronWeb\src\LabCamaron.Web\wwwroot\js\enteNatural\ente-general.js
-C:\Users\Usuario\Documents\GitHub\LabCamaronWeb\src\LabCamaron.Web\wwwroot\js\enteNatural\ente-roles.js
-C:\Users\Usuario\Documents\GitHub\LabCamaronWeb\src\LabCamaron.Web\wwwroot\js\entePersonal\ente-personal.js
-C:\Users\Usuario\Documents\GitHub\LabCamaronWeb\src\LabCamaron.Web\wwwroot\js\enteTecnico\ente-tecnico.js
-C:\Users\Usuario\Documents\GitHub\LabCamaronWeb\src\LabCamaron.Web\wwwroot\js\enteVendedor\ente-vendedor.js
-C:\Users\Usuario\Documents\GitHub\LabCamaronWeb\src\LabCamaron.Web\wwwroot\js\planificacionSiembra\planificacionSiembra.js

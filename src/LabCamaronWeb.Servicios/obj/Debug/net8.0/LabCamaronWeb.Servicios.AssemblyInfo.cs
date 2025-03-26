@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LabCamaronWeb.Servicios")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f70267a70e897bab8f5d9ef25ea1c972518e67e6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc1504454c3e66f034f2b02eb0660dae2bf35652")]
 [assembly: System.Reflection.AssemblyProductAttribute("LabCamaronWeb.Servicios")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LabCamaronWeb.Servicios")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

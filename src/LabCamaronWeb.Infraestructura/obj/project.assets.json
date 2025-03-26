@@ -1483,11 +1483,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Documents\\GitHub\\LabCamaronWeb\\src\\LabCamaronWeb.Infraestructura\\LabCamaronWeb.Infraestructura.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Documents\\GitHub\\xd\\src\\LabCamaronWeb.Infraestructura\\LabCamaronWeb.Infraestructura.csproj",
       "projectName": "LabCamaronWeb.Infraestructura",
-      "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\LabCamaronWeb\\src\\LabCamaronWeb.Infraestructura\\LabCamaronWeb.Infraestructura.csproj",
+      "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\xd\\src\\LabCamaronWeb.Infraestructura\\LabCamaronWeb.Infraestructura.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Documents\\GitHub\\LabCamaronWeb\\src\\LabCamaronWeb.Infraestructura\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\Documents\\GitHub\\xd\\src\\LabCamaronWeb.Infraestructura\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

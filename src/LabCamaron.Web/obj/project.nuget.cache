@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+h79CX+OSfA=",
+  "dgSpecHash": "7r5fjm93ag8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Documents\\GitHub\\LabCamaronWeb\\src\\LabCamaron.Web\\LabCamaron.Web.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Documents\\GitHub\\xd\\src\\LabCamaron.Web\\LabCamaron.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
