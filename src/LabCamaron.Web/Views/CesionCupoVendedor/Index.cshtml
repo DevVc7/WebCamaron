@@ -3,7 +3,6 @@
     ViewData["Title"] = "Cesión Cupo Vendedor";
 }
 
-<!-- Mostrar los modales sin necesidad de activación -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,66 +11,56 @@
     <title>Ceder Cupo Vendedor</title>
 </head>
 <body>
-
     <div class="container mt-4">
         <div class="card">
             <div class="card-header text-center">
                 <h5>Ceder Cupo Vendedor</h5>
             </div>
             <div class="card-body">
-                <div class="row mb-3 text-center p-2 rounded">
+                <div class="row mb-3 text-center p-2 rounded">     
                     <div class="col-md-6">
                         <label for="planificacion" class="form-label">Planificación</label>
                         <input type="text" class="form-control text-center" id="planificacion" value="Ene-25 a Feb-25" disabled>
                     </div>
                     <div class="col-md-6">
-                        <label for="laboratorio" class="form-label">Laboratorio</label>
-                        <input type="text" class="form-control text-center" id="laboratorio" value="LAB001" disabled>
+                        <label class="form-label">Laboratorio</label>
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <input type="text" class="form-control text-center" id="codigoLaboratorio" value="LAB001" disabled>
+                            </div>
+                            <div class="col-auto px-1">-</div>
+                            <div class="col-md-7">
+                                <input type="text" class="form-control text-center w-100" id="nombreLaboratorio" value=" Nombre del Laboratorio" disabled>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
                 <div class="row mb-3 text-center">
                     <div class="col-md-6">
                         <label class="form-label">Vendedor A</label>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <select class="form-select text-center" id="nombreVendedorA">
-                                    <option value="" disabled selected>Seleccione</option>
-                                    <option value="Jaime Medina" data-codigo="222222222">Jaime Medina</option>
-                                    <option value="Lupita Guadalupe" data-codigo="333333333">Lupita Guadalupe</option>
-                                    <option value="Dipper Antonio" data-codigo="111111111">Dipper Antonio</option>
-                                    <option value="Lucas Renato" data-codigo="444444444">Lucas Renato</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control text-center" id="codigoVendedorA" placeholder="Código" readonly>
-                            </div>
-                        </div>
+                        <select class="form-select text-center w-100" id="nombreVendedorA" onchange="actualizarTabla(this.value, 'tablaVendedorA')">
+                            <option value="" disabled selected>Seleccione</option>
+                            <option value="Jaime Medina" data-codigo="222222222">Jaime Medina</option>
+                            <option value="Lupita Guadalupe" data-codigo="333333333">Lupita Guadalupe</option>
+                            <option value="Dipper Antonio" data-codigo="111111111">Dipper Antonio</option>
+                            <option value="Lucas Renato" data-codigo="444444444">Lucas Renato</option>
+                        </select>                  
                     </div>
-
                     <div class="col-md-6">
                         <label class="form-label">Vendedor B</label>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <select class="form-select text-center" id="nombreVendedorB">
-                                    <option value="" disabled selected>Seleccione</option>
-                                    <option value="Jaime Medina" data-codigo="222222222">Jaime Medina</option>
-                                    <option value="Lupita Guadalupe" data-codigo="333333333">Lupita Guadalupe</option>
-                                    <option value="Dipper Antonio" data-codigo="111111111">Dipper Antonio</option>
-                                    <option value="Lucas Renato" data-codigo="444444444">Lucas Renato</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control text-center" id="codigoVendedorB" placeholder="Código" readonly>
-                            </div>
-                        </div>
+                        <select class="form-select text-center w-100" id="nombreVendedorB" onchange="actualizarTabla(this.value, 'tablaVendedorB')">
+                            <option value="" disabled selected>Seleccione</option>
+                            <option value="Jaime Medina" data-codigo="222222222">Jaime Medina</option>
+                            <option value="Lupita Guadalupe" data-codigo="333333333">Lupita Guadalupe</option>
+                            <option value="Dipper Antonio" data-codigo="111111111">Dipper Antonio</option>
+                            <option value="Lucas Renato" data-codigo="444444444">Lucas Renato</option>
+                        </select>
+                      
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-md-6 border p-3">
-                        <h5 class="text-center" id="vendedor1Nombre">VENDEDOR 1</h5>
-                        <table class="table table-bordered text-center">
+                        <table class="table table-bordered text-center" id="tablaVendedorA">
                             <thead>
                                 <tr>
                                     <th>Módulo</th>
@@ -79,28 +68,11 @@
                                     <th>Acción</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>xxxxxx 1</td>
-                                    <td>10'000.000</td>
-                                    <td><a href="#">Editar</a></td>
-                                </tr>
-                                <tr>
-                                    <td>xxxxxxx 2</td>
-                                    <td>7'000.000</td>
-                                    <td><a href="#">Editar</a></td>
-                                </tr>
-                                <tr>
-                                    <td>xxxxxxx 3</td>
-                                    <td>4'000.000</td>
-                                    <td><a href="#">Editar</a></td>
-                                </tr>
-                            </tbody>
+                            <tbody></tbody>
                         </table>
                     </div>
                     <div class="col-md-6 border p-3">
-                        <h5 class="text-center" id="vendedor2Nombre">VENDEDOR 2</h5>
-                        <table class="table table-bordered text-center">
+                        <table class="table table-bordered text-center" id="tablaVendedorB">
                             <thead>
                                 <tr>
                                     <th>Módulo</th>
@@ -108,65 +80,19 @@
                                     <th>Acción</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>xxxxxxxxxx 1</td>
-                                    <td>2'000.000</td>
-                                    <td><a href="#">Editar</a></td>
-                                </tr>
-                                <tr>
-                                    <td>xxxxxxxxxxx 2</td>
-                                    <td>2'000.000</td>
-                                    <td><a href="#">Editar</a></td>
-                                </tr>
-                                <tr>
-                                    <td>xxxxxxxxxxx 3</td>
-                                    <td>5'000.000</td>
-                                    <td><a href="#">Editar</a></td>
-                                </tr>
-                            </tbody>
+                            <tbody></tbody>
                         </table>
                     </div>
                 </div>
-
                 <div class="text-center mt-3">
                     <button type="submit" class="btn btn-primary">Grabar</button>
                 </div>
             </div>
         </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        function actualizarOpciones() {
-            let vendedorA = document.getElementById("nombreVendedorA").value;
-            let vendedorB = document.getElementById("nombreVendedorB").value;
-            let opcionesA = document.querySelectorAll("#nombreVendedorA option:not([disabled])");
-            let opcionesB = document.querySelectorAll("#nombreVendedorB option:not([disabled])");
-
-            opcionesA.forEach(op => {
-                op.hidden = op.value && op.value === vendedorB;
-            });
-            opcionesB.forEach(op => {
-                op.hidden = op.value && op.value === vendedorA;
-            });
-        }
-
-        document.getElementById("nombreVendedorA").addEventListener("change", function() {
-            let selectedOption = this.options[this.selectedIndex];
-            document.getElementById("codigoVendedorA").value = selectedOption.getAttribute("data-codigo") || "";
-            actualizarOpciones();
-        });
-
-        document.getElementById("nombreVendedorB").addEventListener("change", function() {
-            let selectedOption = this.options[this.selectedIndex];
-            document.getElementById("codigoVendedorB").value = selectedOption.getAttribute("data-codigo") || "";
-            actualizarOpciones();
-        });
-
-        actualizarOpciones();
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
+                document.addEventListener("DOMContentLoaded", function () {
             function actualizarOpciones() {
                 let vendedorA = document.getElementById("nombreVendedorA").value;
                 let vendedorB = document.getElementById("nombreVendedorB").value;
@@ -180,44 +106,64 @@
                     op.hidden = op.value && op.value === vendedorA;
                 });
             }
-
-            document.getElementById("nombreVendedorA").addEventListener("change", function () {
-                let selectedOption = this.options[this.selectedIndex];
-                let codigoInput = document.getElementById("codigoVendedorA");
-                let nombreHeader = document.getElementById("vendedor1Nombre");
-
-                if (selectedOption.value) {
-                    codigoInput.value = selectedOption.getAttribute("data-codigo") || "";
-                    nombreHeader.textContent = selectedOption.value;
-                } else {
-                    codigoInput.value = "";
-                    nombreHeader.textContent = "VENDEDOR 1";
-                }
-
-                actualizarOpciones();
-            });
-
-            document.getElementById("nombreVendedorB").addEventListener("change", function () {
-                let selectedOption = this.options[this.selectedIndex];
-                let codigoInput = document.getElementById("codigoVendedorB");
-                let nombreHeader = document.getElementById("vendedor2Nombre");
-
-                if (selectedOption.value) {
-                    codigoInput.value = selectedOption.getAttribute("data-codigo") || "";
-                    nombreHeader.textContent = selectedOption.value;
-                } else {
-                    codigoInput.value = "";
-                    nombreHeader.textContent = "VENDEDOR 2";
-                }
-
-                actualizarOpciones();
-            });
-
             actualizarOpciones();
         });
+        const dataVendedores = {
+            "Jaime Medina": [
+                { modulo: "Módulo 1", cupo: "10'000.000" },
+                { modulo: "Módulo 2", cupo: "7'000.000" },
+                { modulo: "Módulo 3", cupo: "4'000.000" }
+            ],
+            "Lupita Guadalupe": [
+                { modulo: "Módulo 1", cupo: "8'000.000" },
+                { modulo: "Módulo 2", cupo: "6'000.000" },
+                { modulo: "Módulo 3", cupo: "5'000.000" }
+            ],
+            "Dipper Antonio": [
+                { modulo: "Módulo 1", cupo: "9'000.000" },
+                { modulo: "Módulo 2", cupo: "5'000.000" },
+                { modulo: "Módulo 3", cupo: "6'000.000" }
+            ],
+            "Lucas Renato": [
+                { modulo: "Módulo 1", cupo: "7'000.000" },
+                { modulo: "Módulo 2", cupo: "8'000.000" },
+                { modulo: "Módulo 3", cupo: "9'000.000" }
+            ]
+        };
+
+        function actualizarTabla(vendedor, tablaId) {
+            const tabla = document.getElementById(tablaId);
+            const tbody = tabla.querySelector("tbody");
+            tbody.innerHTML = "";
+
+            if (dataVendedores[vendedor]) {
+                dataVendedores[vendedor].forEach(item => {
+                    let fila = `<tr>
+                                    <td>${item.modulo}</td>
+                                    <td>${item.cupo}</td>
+                                    <td><a href='#'>Editar</a></td>
+                                </tr>`;
+                    tbody.innerHTML += fila;
+                });
+            }
+        }
+
+        $(document).ready(function() {
+            $('#nombreVendedorA, #nombreVendedorB').on('change', function() {
+                let selectedA = $('#nombreVendedorA').val();
+                let selectedB = $('#nombreVendedorB').val();
+
+                $('#nombreVendedorB option').prop('disabled', false);
+                $('#nombreVendedorA option').prop('disabled', false);
+
+                if (selectedA) {
+                    $(`#nombreVendedorB option[value='${selectedA}']`).prop('disabled', true);
+                }
+                if (selectedB) {
+                    $(`#nombreVendedorA option[value='${selectedB}']`).prop('disabled', true);
+                }
+            });
+        });
     </script>
-
-
-
 </body>
 </html>
