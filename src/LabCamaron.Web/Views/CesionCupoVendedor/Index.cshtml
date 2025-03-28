@@ -10,7 +10,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ceder Cupo Vendedor</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .modal-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .modal-footer {
+            margin-top: 10px;
+        }
+    </style>
 </head>
+
+
+<!-- Modal -->
+<!-- Agregar una tabla al modal para mostrar múltiples módulos -->
+<div id="modalEditarCupo" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 id="modalTitulo">Editar Cupo</h5>
+        </div>
+        <div class="modal-body">
+            <table class="table table-bordered text-center" id="tablaModal">
+                <thead>
+                    <tr>
+                        <th>Módulo</th>
+                        <th>Cupo Cedido</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="modal-footer">
+            <button id="guardarCupo" class="btn btn-success">Guardar</button>
+            <button id="cerrarModal" class="btn btn-secondary">Cerrar</button>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        z-index: 1000;
+        width: 40%;
+    }
+
+    .modal-header {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .modal-footer {
+        margin-top: 10px;
+        text-align: right;
+    }
+</style>
+
 <body>
     <div class="container mt-4">
         <div class="card">
@@ -60,6 +137,7 @@
                 </div>
                 <div class="table-container">
                     <div class="border p-3">
+                        <h6>Vendedor A</h6>
                         <table class="table table-bordered text-center" id="tablaVendedorA">
                             <thead>
                                 <tr>
@@ -73,7 +151,8 @@
                             <tbody></tbody>
                         </table>
                     </div>
-                    <div class="border p-3">
+                    <div class="border p-3 mt-3">
+                        <h6>Vendedor B</h6>
                         <table class="table table-bordered text-center" id="tablaVendedorB">
                             <thead>
                                 <tr>
@@ -88,302 +167,234 @@
                         </table>
                     </div>
                 </div>
-
-
                 <div class="text-center mt-3">
                     <button type="submit" class="btn btn-primary">Grabar</button>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
     <script>
-        const dataVendedores = {
-            "Jaime Medina": [
-                { modulo: "Módulo 1", cupo: "10'000.000" },
-                { modulo: "Módulo 2", cupo: "7'000.000" },
-                { modulo: "Módulo 3", cupo: "4'000.000" }
-            ],
-            "Lupita Guadalupe": [
-                { modulo: "Módulo 1", cupo: "8'000.000" },
-                { modulo: "Módulo 2", cupo: "6'000.000" },
-                { modulo: "Módulo 3", cupo: "5'000.000" }
-            ],
-            "Dipper Antonio": [
-                { modulo: "Módulo 1", cupo: "9'000.000" },
-                { modulo: "Módulo 2", cupo: "5'000.000" },
-                { modulo: "Módulo 3", cupo: "6'000.000" }
-            ],
-            "Lucas Renato": [
-                { modulo: "Módulo 1", cupo: "7'000.000" },
-                { modulo: "Módulo 2", cupo: "8'000.000" },
-                { modulo: "Módulo 3", cupo: "9'000.000" }
-            ]
-        };
+        $(document).ready(function() {
+            let datosVendedores = {
+                "Jaime Medina": [
+                    { modulo: 'Hupo 1', cupoActual: 90 },
+                    { modulo: 'Hupo 2', cupoActual: 100 },
+                    { modulo: 'Hupo 3', cupoActual: 40 }
+                ],
+                "Lupita Guadalupe": [
+                    { modulo: 'Papa 1', cupoActual: 20 },
+                    { modulo: 'Papa 2', cupoActual: 50 },
+                    { modulo: 'Papa 3', cupoActual: 90 }
+                ],
+                "Dipper Antonio": [
+                    { modulo: 'Madera 1', cupoActual: 90 },
+                    { modulo: 'Madera 2', cupoActual: 87 },
+                    { modulo: 'Madera 3', cupoActual: 70 }
+                ],
+                "Lucas Renato": [
+                    { modulo: 'Roca 1', cupoActual: 100 },
+                    { modulo: 'Roca 2', cupoActual: 60 },
+                    { modulo: 'Roca 3', cupoActual: 29 }
+                ]
+            };
 
-        function actualizarTabla(vendedor, tablaId) {
-            const tabla = document.getElementById(tablaId);
-            const tbody = tabla.querySelector("tbody");
-            tbody.innerHTML = "";
+            function poblarTabla(idTabla, vendedor) {
+                let tbody = $(idTabla).find("tbody");
+                tbody.empty();
 
-            if (dataVendedores[vendedor]) {
-                dataVendedores[vendedor].forEach(item => {
+                if (!vendedor || !datosVendedores[vendedor]) return;
+
+                datosVendedores[vendedor].forEach(dato => {
                     let fila = `<tr>
-                                    <td>${item.modulo}</td>
-                                    <td>${item.cupo}</td>
-                                    <td><input type='text' class='form-control text-center' placeholder='Ingrese cupo'></td>
-                                    <td><input type='text' class='form-control text-center' placeholder='Cupo nuevo'></td>
-                                    <td><a href='#'>Editar</a></td>
-                                </tr>`;
-                    tbody.innerHTML += fila;
+                        <td>${dato.modulo}</td>
+                        <td>${dato.cupoActual}</td>
+                        <td><span class="cupoCedido">0</span></td>
+                        <td>${dato.cupoActual}</td>
+                        <td><button class='btn btn-sm btn-primary editar-btn'>Editar</button></td>
+                    </tr>`;
+                    tbody.append(fila);
                 });
             }
-        }
 
-        $(document).ready(function() {
-            $('#nombreVendedorA, #nombreVendedorB').on('change', function() {
-                actualizarTabla($('#nombreVendedorA').val(), 'tablaVendedorA');
-                actualizarTabla($('#nombreVendedorB').val(), 'tablaVendedorB');
+            $('#nombreVendedorA').change(function() {
+                let vendedor = $(this).val();
+                poblarTabla('#tablaVendedorA', vendedor);
+            });
+
+            $('#nombreVendedorB').change(function() {
+                let vendedor = $(this).val();
+                poblarTabla('#tablaVendedorB', vendedor);
             });
         });
     </script>
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Modal Visual</title>
-        <style>
-            .modal {
-                display: none; 
-                position: fixed;
-                z-index: 1;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
-                justify-content: center;
-                align-items: center;
-            }
+    <style>
+        .modal {
+            width: 50%; /* Reducir el ancho del modal */
+            max-height: 88vh; /* Limitar la altura del modal */
+            overflow-y: auto; /* Permitir desplazamiento si es necesario */
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            let vendedorBSeleccionado = "";
 
-            .modal-content {
-                background-color: white;
-                padding: 20px;
-                border-radius: 10px;
-                width: 400px;
-                text-align: center;
-            }
+            function guardarEnLocalStorage() {
+                let datosA = [];
+                let datosB = [];
 
-            .modal-header {
-                font-size: 18px;
-                font-weight: bold;
-                margin-bottom: 15px;
-            }
-
-            .form-group {
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 10px;
-            }
-
-            select, input {
-                width: 45%;
-                padding: 5px;
-            }
-
-            .modal-footer {
-                margin-top: 15px;
-            }
-
-            .btn {
-                padding: 8px 15px;
-                border: none;
-                cursor: pointer;
-            }
-
-            .btn-primary {
-                background-color: blue;
-                color: white;
-            }
-
-            .btn-secondary {
-                background-color: gray;
-                color: white;
-            }
-        </style>
-    </head>
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Modal Visual</title>
-        <style>
-        
-            .modal {
-                display: none;
-                position: fixed;
-                z-index: 1;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
-                justify-content: center;
-                align-items: center;
-            }
-
-            .modal-content {
-                background-color: white;
-                padding: 20px;
-                border-radius: 10px;
-                width: 400px;
-                text-align: center;
-            }
-
-            .modal-header {
-                font-size: 18px;
-                font-weight: bold;
-                margin-bottom: 15px;
-            }
-
-            .form-group {
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 10px;
-            }
-
-            select, input {
-                width: 45%;
-                padding: 5px;
-            }
-
-            .modal-footer {
-                margin-top: 15px;
-            }
-
-            .btn {
-                padding: 8px 15px;
-                border: none;
-                cursor: pointer;
-            }
-
-            .btn-primary {
-                background-color: blue;
-                color: white;
-            }
-
-            .btn-secondary {
-                background-color: gray;
-                color: white;
-            }
-
-            .error-message {
-                color: red;
-                font-size: 14px;
-                display: none;
-                margin-top: 10px;
-            }
-        </style>
-    </head>
-    <body>
-    
-        <button class="btn btn-primary" onclick="abrirModal()">Abrir Modal</button>
-        <div id="cupoModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    Módulo 1 - Cupo Actual: <span style="color: blue;">100%</span>
-                </div>
-                <div class="modal-body">
-                    <form id="cupoForm">
-                      
-                        <div class="form-group">
-                            <select>
-                                <option selected disabled>Seleccione...</option>
-                                <option value="1">Módulo 1</option>
-                                <option value="2">Módulo 2</option>
-                                <option value="3">Módulo 3</option>
-                            </select>
-                            <input type="number" class="cupo-input" placeholder="Ingrese valor" min="0" max="100" oninput="validarCupo()">
-                        </div>
-
-                        <div class="form-group">
-                            <select>
-                                <option selected disabled>Seleccione...</option>
-                                <option value="1">Módulo 1</option>
-                                <option value="2">Módulo 2</option>
-                                <option value="3">Módulo 3</option>
-                            </select>
-                            <input type="number" class="cupo-input" placeholder="Ingrese valor" min="0" max="100" oninput="validarCupo()">
-                        </div>
-
-                        <div class="form-group">
-                            <select>
-                                <option selected disabled>Seleccione...</option>
-                                <option value="1">Módulo 1</option>
-                                <option value="2">Módulo 2</option>
-                                <option value="3">Módulo 3</option>
-                            </select>
-                            <input type="number" class="cupo-input" placeholder="Ingrese valor" min="0" max="100" oninput="validarCupo()">
-                        </div>
-
-                        <!-- Mensaje de error -->
-                        <div id="error-message" class="error-message">
-                            La suma de los valores no puede superar el 100%.
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" onclick="cerrarModal()">Cerrar</button>
-                    <button class="btn btn-primary" onclick="guardarCupo()">Guardar</button>
-                </div>
-            </div>
-        </div>
-
-        <script>
-            function abrirModal() {
-                document.getElementById("cupoModal").style.display = "flex";
-            }
-
-            function cerrarModal() {
-                document.getElementById("cupoModal").style.display = "none";
-            }
-
-            function validarCupo() {
-                let inputs = document.querySelectorAll(".cupo-input");
-                let total = 0;
-
-                inputs.forEach(input => {
-                    total += parseFloat(input.value) || 0;
+                $("#tablaVendedorA tbody tr").each(function () {
+                    let fila = {
+                        modulo: $(this).find('td:nth-child(1)').text(),
+                        cupoActual: parseInt($(this).find('td:nth-child(2)').text(), 10),
+                        cupoCedido: 0,
+                        cupoNuevo: parseInt($(this).find('td:nth-child(2)').text(), 10)
+                    };
+                    datosA.push(fila);
                 });
 
-                let errorMessage = document.getElementById("error-message");
-
-                if (total > 100) {
-                    errorMessage.style.display = "block";
-                } else {
-                    errorMessage.style.display = "none";
-                }
+                $("#tablaVendedorB tbody tr").each(function () {
+                    let fila = {
+                        modulo: $(this).find('td:nth-child(1)').text(),
+                        cupoActual: parseInt($(this).find('td:nth-child(2)').text(), 10),
+                        cupoRecibido: 0,
+                        cupoNuevo: parseInt($(this).find('td:nth-child(2)').text(), 10)
+                    };
+                    datosB.push(fila);
+                });
             }
 
-            function guardarCupo() {
-                let errorMessage = document.getElementById("error-message");
+            function inicializarTablas(datosA = [], datosB = []) {
+                let tbodyA = $("#tablaVendedorA tbody");
+                let tbodyB = $("#tablaVendedorB tbody");
 
-                if (errorMessage.style.display === "block") {
-                    alert("Corrige los valores antes de guardar.");
-                } else {
-                    alert("Valores guardados correctamente.");
-                    cerrarModal();
-                }
+                tbodyA.empty();
+                tbodyB.empty();
+
+                datosA.forEach(dato => {
+                    let fila = `<tr>
+                        <td>${dato.modulo}</td>
+                        <td>${dato.cupoActual}</td>
+                        <td>0</td>
+                        <td>${dato.cupoActual}</td>
+                        <td><button class='btn btn-sm btn-primary editar-btn'>Editar</button></td>
+                    </tr>`;
+                    tbodyA.append(fila);
+                });
+
+                datosB.forEach(dato => {
+                    let fila = `<tr>
+                        <td>${dato.modulo}</td>
+                        <td>${dato.cupoActual}</td>
+                        <td>0</td>
+                        <td>${dato.cupoActual}</td>
+                    </tr>`;
+                    tbodyB.append(fila);
+                });
             }
-        </script>
 
-    </body>
-</html>
+            $("#nombreVendedorA, #nombreVendedorB").change(function () {
+                let datosA = [];
+                let datosB = [];
 
-</html>
+                if ($("#nombreVendedorA").val() !== "") {
+                    datosA = [
+                        { modulo: "Hupo 1", cupoActual: 90 },
+                        { modulo: "Hupo 2", cupoActual: 100 },
+                        { modulo: "Hupo 3", cupoActual: 40 }
+                    ];
+                }
+
+                if ($("#nombreVendedorB").val() !== "") {
+                    datosB = [
+                        { modulo: "Roca 1", cupoActual: 100 },
+                        { modulo: "Roca 2", cupoActual: 60 },
+                        { modulo: "Roca 3", cupoActual: 29 }
+                    ];
+                }
+
+                inicializarTablas(datosA, datosB);
+            });
+
+            $(document).on('click', '.editar-btn', function () {
+                let fila = $(this).closest('tr');
+                let modulo = fila.find('td:nth-child(1)').text();
+                let cupoActual = parseInt(fila.find('td:nth-child(2)').text(), 10);
+
+                vendedorBSeleccionado = $("#nombreVendedorB").val() || "No seleccionado";
+
+                $("#modalTitulo").text(`Editar Cupo - ${modulo}`);
+                $("#vendedorBModal").text(vendedorBSeleccionado);
+                $("#cupoCedidoModal").val("");
+                $("#tablaModal tbody").empty();
+
+                $("#tablaVendedorB tbody tr").each(function () {
+                    let moduloB = $(this).find('td:nth-child(1)').text();
+                    let cupoActualB = parseInt($(this).find('td:nth-child(2)').text(), 10);
+
+                    let filaModal = `<tr>
+                        <td>${moduloB}</td>
+                        <td><input type='number' class='form-control cupoCedidoInput' value='0' min='0' max='${cupoActual}'></td>
+                    </tr>`;
+                    $("#tablaModal tbody").append(filaModal);
+                });
+
+                $("#modalEditarCupo").show();
+            });
+
+            $("#cerrarModal").click(function () {
+                $("#modalEditarCupo").hide();
+            });
+
+            $("#guardarCupo").click(function () {
+                let valido = true;
+                let cuposCedido = [];
+
+                $(".cupoCedidoInput").each(function () {
+                    let valor = parseInt($(this).val(), 10);
+                    let maximo = parseInt($(this).attr('max'), 10);
+
+                    if (valor > maximo) {
+                        alert(`No puedes ceder más de ${maximo} en el módulo ${$(this).closest('tr').find('td:first').text()}.`);
+                        valido = false;
+                        return false;
+                    }
+                    cuposCedido.push({
+                        modulo: $(this).closest('tr').find('td:first').text(),
+                        valor: valor
+                    });
+                });
+
+                if (valido) {
+                    cuposCedido.forEach(cupo => {
+                        $("#tablaVendedorA tbody tr").each(function () {
+                            if ($(this).find('td:first').text() === cupo.modulo) {
+                                $(this).find('td:nth-child(3)').text(cupo.valor);
+                                let cupoActual = parseInt($(this).find('td:nth-child(2)').text(), 10);
+                                $(this).find('td:nth-child(4)').text(cupoActual - cupo.valor);
+                            }
+                        });
+
+                        $("#tablaVendedorB tbody tr").each(function () {
+                            if ($(this).find('td:first').text() === cupo.modulo) {
+                                $(this).find('td:nth-child(3)').text(cupo.valor);
+                                let cupoActual = parseInt($(this).find('td:nth-child(2)').text(), 10);
+                                $(this).find('td:nth-child(4)').text(cupoActual + cupo.valor);
+                            }
+                        });
+                    });
+
+                    alert("Cupos actualizados correctamente.");
+                    $("#modalEditarCupo").hide();
+                }
+            });
+        });
+    </script>
+
+
+
+
 
 </body>
 </html>
-
